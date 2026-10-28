@@ -1,0 +1,109 @@
+{
+  "reference_replotting": {
+    "panels": 26,
+    "fresh_optimization": false,
+    "figures": [
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "claims": {
+      "pglib_opf_case39_epri__api": {
+        "std_pu": 32.36610247469284,
+        "permutation_count": 6,
+        "permutation_max_pu": 30.011200000000006,
+        "permutation_max_increase_percent": -7.275829632357301,
+        "permutations_at_or_above_std_percent": 0.0,
+        "enumeration_count": 91080,
+        "enumeration_max_increase_percent": 19.315262102365626
+      },
+      "pglib_opf_case118_ieee__api": {
+        "std_pu": 27.831299999999956,
+        "permutation_count": 720,
+        "permutation_max_pu": 41.02490000000001,
+        "permutation_max_increase_percent": 47.405618853593154,
+        "permutations_at_or_above_std_percent": 81.38888888888889,
+        "enumeration_count": 0,
+        "enumeration_max_increase_percent": null
+      }
+    },
+    "figure_7": "Not regenerated: only cases 39/118, k=3/4 ramp-based runtime records supplied; paper requires six cases over k=2..8"
+  },
+  "fresh_original_model_exchange": {
+    "successful_cases": [
+      "14",
+      "39",
+      "60",
+      "118",
+      "162",
+      "240"
+    ],
+    "case_jobs": 6,
+    "successful_trace_jobs": 12,
+    "trace_jobs": 12,
+    "model_sizes": [
+      {
+        "case": "14",
+        "variables": 59,
+        "constraints": 55
+      },
+      {
+        "case": "39",
+        "variables": 141,
+        "constraints": 132
+      },
+      {
+        "case": "60",
+        "variables": 243,
+        "constraints": 221
+      },
+      {
+        "case": "118",
+        "variables": 537,
+        "constraints": 484
+      },
+      {
+        "case": "162",
+        "variables": 738,
+        "constraints": 727
+      },
+      {
+        "case": "240",
+        "variables": 1179,
+        "constraints": 1037
+      }
+    ],
+    "interface": "Original Julia model builders, MPS export, supported gurobipy solve",
+    "native_original_search_executed_successfully": false
+  },
+  "controlled_python_highs_comparison": {
+    "steps": 36,
+    "matching_steps": 36,
+    "tolerance_mw": 0.001,
+    "maximum_absolute_difference_mw": 4.263256414560601e-12,
+    "cases": [
+      "14",
+      "39",
+      "60",
+      "118"
+    ],
+    "scope": "One-step primary objective on original exported prior states; not equality of multi-step dispatch choices",
+    "compatibility_model": "PowerModels 0.21.3 DCP compatibility, no persistent shutdown, no secondary tie-break"
+  },
+  "native_license_probe": [
+    {
+      "case": "14",
+      "status": "error",
+      "error": "Gurobi Error 10009: PIP license can only be used from gurobipy interface"
+    }
+  ],
+  "full_paper_numerical_reproduction_complete": false,
+  "remaining": [
+    "Academic/full Gurobi license for native Julia execution",
+    "Fresh native search and sweep runs",
+    "Runtime study with declared protocol and hardware",
+    "Figure-wise fresh-vs-author comparisons"
+  ]
+}

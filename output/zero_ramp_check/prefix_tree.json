@@ -1,0 +1,172 @@
+{
+  "coverage": "explored sequences only",
+  "tree": {
+    "prefix": [],
+    "min_final_shed_mw": 1518.0000020000014,
+    "max_final_shed_mw": 2699.0000020000016,
+    "children": {
+      "2": {
+        "prefix": [
+          2
+        ],
+        "min_final_shed_mw": 2309.2655072056987,
+        "max_final_shed_mw": 2309.2655072056987,
+        "children": {
+          "14": {
+            "prefix": [
+              2,
+              14
+            ],
+            "min_final_shed_mw": 2309.2655072056987,
+            "max_final_shed_mw": 2309.2655072056987,
+            "children": {}
+          }
+        }
+      },
+      "5": {
+        "prefix": [
+          5
+        ],
+        "min_final_shed_mw": 1518.0000020000014,
+        "max_final_shed_mw": 1518.0000020000014,
+        "children": {
+          "10": {
+            "prefix": [
+              5,
+              10
+            ],
+            "min_final_shed_mw": 1518.0000020000014,
+            "max_final_shed_mw": 1518.0000020000014,
+            "children": {}
+          }
+        }
+      },
+      "6": {
+        "prefix": [
+          6
+        ],
+        "min_final_shed_mw": 2309.265507205723,
+        "max_final_shed_mw": 2309.265507205723,
+        "children": {
+          "14": {
+            "prefix": [
+              6,
+              14
+            ],
+            "min_final_shed_mw": 2309.265507205723,
+            "max_final_shed_mw": 2309.265507205723,
+            "children": {}
+          }
+        }
+      },
+      "8": {
+        "prefix": [
+          8
+        ],
+        "min_final_shed_mw": 2309.2655072057028,
+        "max_final_shed_mw": 2309.2655072057028,
+        "children": {
+          "2": {
+            "prefix": [
+              8,
+              2
+            ],
+            "min_final_shed_mw": 2309.2655072057028,
+            "max_final_shed_mw": 2309.2655072057028,
+            "children": {}
+          }
+        }
+      },
+      "9": {
+        "prefix": [
+          9
+        ],
+        "min_final_shed_mw": 2228.4462655463026,
+        "max_final_shed_mw": 2228.4462655463026,
+        "children": {
+          "14": {
+            "prefix": [
+              9,
+              14
+            ],
+            "min_final_shed_mw": 2228.4462655463026,
+            "max_final_shed_mw": 2228.4462655463026,
+            "children": {}
+          }
+        }
+      },
+      "10": {
+        "prefix": [
+          10
+        ],
+        "min_final_shed_mw": 2699.000002000001,
+        "max_final_shed_mw": 2699.000002000001,
+        "children": {
+          "44": {
+            "prefix": [
+              10,
+              44
+            ],
+            "min_final_shed_mw": 2699.000002000001,
+            "max_final_shed_mw": 2699.000002000001,
+            "children": {}
+          }
+        }
+      },
+      "14": {
+        "prefix": [
+          14
+        ],
+        "min_final_shed_mw": 2699.0000020000016,
+        "max_final_shed_mw": 2699.0000020000016,
+        "children": {
+          "46": {
+            "prefix": [
+              14,
+              46
+            ],
+            "min_final_shed_mw": 2699.0000020000016,
+            "max_final_shed_mw": 2699.0000020000016,
+            "children": {}
+          }
+        }
+      },
+      "16": {
+        "prefix": [
+          16
+        ],
+        "min_final_shed_mw": 2228.4462655462994,
+        "max_final_shed_mw": 2228.4462655462994,
+        "children": {
+          "10": {
+            "prefix": [
+              16,
+              10
+            ],
+            "min_final_shed_mw": 2228.4462655462994,
+            "max_final_shed_mw": 2228.4462655462994,
+            "children": {}
+          }
+        }
+      },
+      "46": {
+        "prefix": [
+          46
+        ],
+        "min_final_shed_mw": 2699.0000020000016,
+        "max_final_shed_mw": 2699.0000020000016,
+        "children": {
+          "10": {
+            "prefix": [
+              46,
+              10
+            ],
+            "min_final_shed_mw": 2699.0000020000016,
+            "max_final_shed_mw": 2699.0000020000016,
+            "children": {}
+          }
+        }
+      }
+    }
+  }
+}

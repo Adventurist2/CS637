@@ -1,0 +1,271 @@
+{
+  "coverage": "explored sequences only",
+  "tree": {
+    "prefix": [],
+    "min_final_shed_mw": 2169.7156569570498,
+    "max_final_shed_mw": 3069.7156569570516,
+    "children": {
+      "2": {
+        "prefix": [
+          2
+        ],
+        "min_final_shed_mw": 2559.7902341715967,
+        "max_final_shed_mw": 2559.7902341715967,
+        "children": {
+          "46": {
+            "prefix": [
+              2,
+              46
+            ],
+            "min_final_shed_mw": 2559.7902341715967,
+            "max_final_shed_mw": 2559.7902341715967,
+            "children": {
+              "14": {
+                "prefix": [
+                  2,
+                  46,
+                  14
+                ],
+                "min_final_shed_mw": 2559.7902341715967,
+                "max_final_shed_mw": 2559.7902341715967,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "5": {
+        "prefix": [
+          5
+        ],
+        "min_final_shed_mw": 2177.7156569570493,
+        "max_final_shed_mw": 2177.7156569570493,
+        "children": {
+          "14": {
+            "prefix": [
+              5,
+              14
+            ],
+            "min_final_shed_mw": 2177.7156569570493,
+            "max_final_shed_mw": 2177.7156569570493,
+            "children": {
+              "46": {
+                "prefix": [
+                  5,
+                  14,
+                  46
+                ],
+                "min_final_shed_mw": 2177.7156569570493,
+                "max_final_shed_mw": 2177.7156569570493,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "6": {
+        "prefix": [
+          6
+        ],
+        "min_final_shed_mw": 2169.7156569570498,
+        "max_final_shed_mw": 2169.7156569570498,
+        "children": {
+          "14": {
+            "prefix": [
+              6,
+              14
+            ],
+            "min_final_shed_mw": 2169.7156569570498,
+            "max_final_shed_mw": 2169.7156569570498,
+            "children": {
+              "46": {
+                "prefix": [
+                  6,
+                  14,
+                  46
+                ],
+                "min_final_shed_mw": 2169.7156569570498,
+                "max_final_shed_mw": 2169.7156569570498,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "8": {
+        "prefix": [
+          8
+        ],
+        "min_final_shed_mw": 3069.715656957049,
+        "max_final_shed_mw": 3069.715656957049,
+        "children": {
+          "14": {
+            "prefix": [
+              8,
+              14
+            ],
+            "min_final_shed_mw": 3069.715656957049,
+            "max_final_shed_mw": 3069.715656957049,
+            "children": {
+              "46": {
+                "prefix": [
+                  8,
+                  14,
+                  46
+                ],
+                "min_final_shed_mw": 3069.715656957049,
+                "max_final_shed_mw": 3069.715656957049,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "9": {
+        "prefix": [
+          9
+        ],
+        "min_final_shed_mw": 2177.7156569570493,
+        "max_final_shed_mw": 2177.7156569570493,
+        "children": {
+          "14": {
+            "prefix": [
+              9,
+              14
+            ],
+            "min_final_shed_mw": 2177.7156569570493,
+            "max_final_shed_mw": 2177.7156569570493,
+            "children": {
+              "46": {
+                "prefix": [
+                  9,
+                  14,
+                  46
+                ],
+                "min_final_shed_mw": 2177.7156569570493,
+                "max_final_shed_mw": 2177.7156569570493,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "10": {
+        "prefix": [
+          10
+        ],
+        "min_final_shed_mw": 3069.7156569570498,
+        "max_final_shed_mw": 3069.7156569570498,
+        "children": {
+          "14": {
+            "prefix": [
+              10,
+              14
+            ],
+            "min_final_shed_mw": 3069.7156569570498,
+            "max_final_shed_mw": 3069.7156569570498,
+            "children": {
+              "46": {
+                "prefix": [
+                  10,
+                  14,
+                  46
+                ],
+                "min_final_shed_mw": 3069.7156569570498,
+                "max_final_shed_mw": 3069.7156569570498,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "14": {
+        "prefix": [
+          14
+        ],
+        "min_final_shed_mw": 3069.71565695705,
+        "max_final_shed_mw": 3069.71565695705,
+        "children": {
+          "46": {
+            "prefix": [
+              14,
+              46
+            ],
+            "min_final_shed_mw": 3069.71565695705,
+            "max_final_shed_mw": 3069.71565695705,
+            "children": {
+              "35": {
+                "prefix": [
+                  14,
+                  46,
+                  35
+                ],
+                "min_final_shed_mw": 3069.71565695705,
+                "max_final_shed_mw": 3069.71565695705,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "16": {
+        "prefix": [
+          16
+        ],
+        "min_final_shed_mw": 2314.2534770817924,
+        "max_final_shed_mw": 2314.2534770817924,
+        "children": {
+          "14": {
+            "prefix": [
+              16,
+              14
+            ],
+            "min_final_shed_mw": 2314.2534770817924,
+            "max_final_shed_mw": 2314.2534770817924,
+            "children": {
+              "46": {
+                "prefix": [
+                  16,
+                  14,
+                  46
+                ],
+                "min_final_shed_mw": 2314.2534770817924,
+                "max_final_shed_mw": 2314.2534770817924,
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "46": {
+        "prefix": [
+          46
+        ],
+        "min_final_shed_mw": 3069.7156569570516,
+        "max_final_shed_mw": 3069.7156569570516,
+        "children": {
+          "14": {
+            "prefix": [
+              46,
+              14
+            ],
+            "min_final_shed_mw": 3069.7156569570516,
+            "max_final_shed_mw": 3069.7156569570516,
+            "children": {
+              "37": {
+                "prefix": [
+                  46,
+                  14,
+                  37
+                ],
+                "min_final_shed_mw": 3069.7156569570516,
+                "max_final_shed_mw": 3069.7156569570516,
+                "children": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

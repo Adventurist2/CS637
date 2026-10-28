@@ -1,0 +1,41 @@
+{
+  "output": "output/reproduction/original_probe",
+  "jobs": [
+    {
+      "id": "probe_14",
+      "case": "14",
+      "method": "probe",
+      "perturb": false
+    },
+    {
+      "id": "probe_39",
+      "case": "39",
+      "method": "probe",
+      "perturb": false
+    },
+    {
+      "id": "probe_60",
+      "case": "60",
+      "method": "probe",
+      "perturb": false
+    },
+    {
+      "id": "probe_118",
+      "case": "118",
+      "method": "probe",
+      "perturb": false
+    },
+    {
+      "id": "probe_162",
+      "case": "162",
+      "method": "probe",
+      "perturb": false
+    },
+    {
+      "id": "probe_240",
+      "case": "240",
+      "method": "probe",
+      "perturb": false
+    }
+  ]
+}

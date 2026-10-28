@@ -1,0 +1,26 @@
+[
+  {
+    "case": "39",
+    "seed": 101,
+    "ramp": 0.025,
+    "perturb": 0.15,
+    "status": "infeasible_initial",
+    "error": "case=39 seed=101 perturb=0.15: Optimization did not finish optimally: Infeasible"
+  },
+  {
+    "case": "39",
+    "seed": 101,
+    "ramp": 0.1,
+    "perturb": 0.15,
+    "status": "infeasible_initial",
+    "error": "case=39 seed=101 perturb=0.15: Optimization did not finish optimally: Infeasible"
+  },
+  {
+    "case": "39",
+    "seed": 101,
+    "ramp": 0.5,
+    "perturb": 0.15,
+    "status": "infeasible_initial",
+    "error": "case=39 seed=101 perturb=0.15: Optimization did not finish optimally: Infeasible"
+  }
+]

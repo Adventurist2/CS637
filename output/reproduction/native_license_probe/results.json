@@ -1,0 +1,21 @@
+{
+  "source": "original extracted Julia functions; no algorithm modifications",
+  "results": [
+    {
+      "julia_version": "1.9.2",
+      "job": {
+        "method": "probe",
+        "case": "14",
+        "id": "probe_14",
+        "perturb": false
+      },
+      "status": "error",
+      "error": "Gurobi Error 10009: PIP license can only be used from gurobipy interface",
+      "started_utc": "2026-10-23T10:55:08.249",
+      "id": "probe_14",
+      "gurobi_version": "12.0.0",
+      "wall_seconds": 17.03600001335144
+    }
+  ],
+  "plan": "C:\\Users\\91943\\Documents\\ChatGPT\\cs637\\reproduction\\plans\\native_license_probe.json"
+}

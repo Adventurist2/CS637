@@ -1,0 +1,43 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.17.1",
+      "highspy": "1.15.1",
+      "networkx": "3.6.1",
+      "matplotlib": "3.10.0"
+    },
+    "created_utc": "2026-10-26T21:12:40.964073+00:00"
+  },
+  "source_sha256": "40370289fd50bc6ca773679d5da36c9913df6799fd83da9a3bfa2b623b3bbd37",
+  "design_seeds": [
+    0,
+    1,
+    2
+  ],
+  "heldout_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "protection_rows": 1648,
+  "sensitivity_rows": 144,
+  "sensitivity_success_rows": 126,
+  "sensitivity_initial_infeasible_rows": 18,
+  "timing_rows": 1620,
+  "priority_rows": 24788,
+  "max_residual_pu": 1.0000022143685783e-08,
+  "max_priority_service_floor_tolerance_pu": 6.548741559211186e-06,
+  "oracle_source_fingerprints": [
+    "2ecaa5e4fe0d1e6d49be065000087397c71e0f6515d3acb199544b1e4e209ddf",
+    "40370289fd50bc6ca773679d5da36c9913df6799fd83da9a3bfa2b623b3bbd37",
+    "598986d50799ef8d50fdee4334c4a21aca8226682bdb1034b57e18f3cd2eb1a9",
+    "a0ddc84a53c4a42214f7d9b51024b8aebb183aed9db7eb27aaf73ea11986a465"
+  ],
+  "statistical_unit": "demand scenario, not outage sequence or random-defense draw",
+  "duration_this_invocation_seconds": 2.51393139999891
+}

@@ -1,0 +1,57 @@
+{
+  "output": "output/reproduction/fresh_figure_4",
+  "resume": true,
+  "scope": "Paper settings; new seeded scenarios, not recovery of unknown original RNG state",
+  "jobs": [
+    {
+      "id": "fig4_39_std",
+      "case": "39",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "method": "std",
+      "solver_timeout": 86400
+    },
+    {
+      "id": "fig4_39_perm",
+      "case": "39",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "method": "perm",
+      "solver_timeout": 86400
+    },
+    {
+      "id": "fig4_39_enum",
+      "case": "39",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "method": "enum",
+      "solver_timeout": 86400
+    },
+    {
+      "id": "fig4_118_std",
+      "case": "118",
+      "k": 6,
+      "ramp": 0.01,
+      "seed": 0,
+      "perturb": true,
+      "method": "std",
+      "solver_timeout": 86400
+    },
+    {
+      "id": "fig4_118_perm",
+      "case": "118",
+      "k": 6,
+      "ramp": 0.01,
+      "seed": 0,
+      "perturb": true,
+      "method": "perm",
+      "solver_timeout": 86400
+    }
+  ]
+}

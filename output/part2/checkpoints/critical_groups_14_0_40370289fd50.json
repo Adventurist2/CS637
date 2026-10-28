@@ -1,0 +1,37 @@
+[
+  {
+    "case": "14",
+    "seed": 0,
+    "critical_bus_fraction": 0.1,
+    "bus_ids": [
+      11,
+      13
+    ],
+    "critical_demand_mw": 34.58585819529902
+  },
+  {
+    "case": "14",
+    "seed": 0,
+    "critical_bus_fraction": 0.25,
+    "bus_ids": [
+      3,
+      10,
+      12
+    ],
+    "critical_demand_mw": 206.52363332211107
+  },
+  {
+    "case": "14",
+    "seed": 0,
+    "critical_bus_fraction": 0.5,
+    "bus_ids": [
+      2,
+      3,
+      6,
+      9,
+      10,
+      13
+    ],
+    "critical_demand_mw": 345.46818003806067
+  }
+]

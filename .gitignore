@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+tmp/
+third_party/
+.mplconfig/
+.tools/
+.reproduction-state/
+
+# Local credentials and private keys
+.env
+.env.*
+!.env.example
+*.lic
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/

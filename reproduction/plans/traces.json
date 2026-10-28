@@ -1,0 +1,173 @@
+{
+  "output": "output/reproduction/original_traces",
+  "jobs": [
+    {
+      "id": "trace_14_0",
+      "case": "14",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_14_1",
+      "case": "14",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 1,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_14_2",
+      "case": "14",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 2,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_39_0",
+      "case": "39",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_39_1",
+      "case": "39",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 1,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_39_2",
+      "case": "39",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 2,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_60_0",
+      "case": "60",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_60_1",
+      "case": "60",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 1,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_60_2",
+      "case": "60",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 2,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_118_0",
+      "case": "118",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 0,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_118_1",
+      "case": "118",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 1,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "trace_118_2",
+      "case": "118",
+      "method": "trace",
+      "k": 3,
+      "ramp": 0.1,
+      "seed": 2,
+      "perturb": true,
+      "sequence": [
+        1,
+        3,
+        4
+      ]
+    }
+  ]
+}

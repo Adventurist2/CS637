@@ -1,0 +1,87 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "highspy": "1.15.1",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2"
+    },
+    "created_utc": "2026-10-23T09:58:29.779115+00:00"
+  },
+  "scenario": {
+    "case": "pglib_opf_case14_ieee__api",
+    "base_mva": 100.0,
+    "buses": 14,
+    "branches": 20,
+    "generators": 5,
+    "demand_mw": 462.96999999999997,
+    "source_sha256": "fab784110302c1c7d1dc8d74c5d133bb056be15af44fbe5933ebdc20e077962c",
+    "negative_load_clipped_mw": 0.0,
+    "negative_load_injection_mw": 0.0,
+    "negative_load_policy": "fixed injection at initialization, curtailable and nonrecoverable thereafter",
+    "seed": 0,
+    "perturbation": 0.0
+  },
+  "ramp_fraction": 0.1,
+  "tie_break": "cost",
+  "lines": [
+    1,
+    3,
+    4
+  ],
+  "simultaneous_shed_mw": 375.00000100000005,
+  "orderings": [
+    {
+      "sequence": [
+        1,
+        3,
+        4
+      ],
+      "shed_mw": 375.00000300000005
+    },
+    {
+      "sequence": [
+        1,
+        4,
+        3
+      ],
+      "shed_mw": 375.00000300000005
+    },
+    {
+      "sequence": [
+        3,
+        1,
+        4
+      ],
+      "shed_mw": 462.96999999999997
+    },
+    {
+      "sequence": [
+        3,
+        4,
+        1
+      ],
+      "shed_mw": 462.96999999999997
+    },
+    {
+      "sequence": [
+        4,
+        1,
+        3
+      ],
+      "shed_mw": 397.31562882651883
+    },
+    {
+      "sequence": [
+        4,
+        3,
+        1
+      ],
+      "shed_mw": 397.31562882651883
+    }
+  ],
+  "comparison_limit": "Single simultaneous response and multiple sequential responses allow different redispatch opportunities"
+}

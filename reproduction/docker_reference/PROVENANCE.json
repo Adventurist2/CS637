@@ -1,0 +1,60 @@
+{
+  "image": "andrewgchio/iccps-sequin:v1.0.3",
+  "layers": [
+    {
+      "layer": 7,
+      "digest": "sha256:1954d298c878a51cab236f45210b2cf0885190df4be436bbf21ba48c2b49090c",
+      "files": 1
+    },
+    {
+      "layer": 9,
+      "digest": "sha256:53f9fea0d28bc4786a29eb2839ca03beb0b1f7b212df704d9e2be0dd066116d5",
+      "files": 7
+    },
+    {
+      "layer": 10,
+      "digest": "sha256:185689c5ab7a68479a31adfd5435febccd865196c48ab5b4326688f1c9e0162a",
+      "files": 28
+    },
+    {
+      "layer": 11,
+      "digest": "sha256:bb3922b4a1ef21316ed30e6649283ef6eac853718cee7a2d416d24bf11a42a19",
+      "files": 1
+    },
+    {
+      "layer": 12,
+      "digest": "sha256:98b9c6c6ce8e6a3cbae45f630473a7f040076277297377e7327c0ca24b6c10a1",
+      "files": 1
+    },
+    {
+      "layer": 13,
+      "digest": "sha256:fb59f3641b75d543e46d6ee0dc817495fdf91ebf3fb42034e295ee6408bfbf65",
+      "files": 4
+    },
+    {
+      "layer": 14,
+      "digest": "sha256:b06e8a99e7e02feae6af2134f66a031ee7039d428c8a523e51e71a5ea51acff2",
+      "files": 1
+    },
+    {
+      "layer": 15,
+      "digest": "sha256:d816e6112a816408e41df1153c131325e0df9b11c720e10d8454e9b8117bf7b3",
+      "files": 8
+    },
+    {
+      "layer": 16,
+      "digest": "sha256:68445f91c1669890e2658653dc4a5be17a32f83b326266396ade6ef644660411",
+      "files": 6
+    },
+    {
+      "layer": 17,
+      "digest": "sha256:a048b87e304ded016dfca08e5b5e95873d265b4806379879576d2e4b83c1c22c",
+      "files": 1
+    },
+    {
+      "layer": 18,
+      "digest": "sha256:f1b567acc65ec6f9bd99e3373c5500a4fef964c4a883b98f4961527aafee102c",
+      "files": 1
+    }
+  ]
+}

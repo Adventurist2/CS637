@@ -1,0 +1,4 @@
+# Additional versions used with requirements-lock.txt for reference reproduction.
+# These are optional: the independent Python implementation does not need Gurobi.
+gurobipy==12.0.3
+pandas==3.1.0

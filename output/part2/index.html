@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SEQUIN: second-part evaluation</title><style>
+body{margin:0;background:#edf2f5;color:#172b3a;font:16px/1.6 system-ui,sans-serif}main{max-width:1160px;margin:28px auto;padding:38px;background:white;border-top:7px solid #14676d;border-radius:8px}h1{font-size:32px;line-height:1.2}h2{margin-top:45px;border-bottom:1px solid #cbd7df;padding-bottom:8px}h3{margin-top:30px}a{color:#06617d}code{background:#eef3f6;padding:2px 5px;border-radius:3px;font-size:13px}table{border-collapse:collapse;min-width:700px;width:100%;font-size:13px}td{padding:9px;border-bottom:1px solid #d7e0e7;vertical-align:top}tr:first-child{background:#173d51;color:white;font-weight:600}tr:nth-child(even){background:#f4f7f9}.scroll{overflow-x:auto;margin:20px 0}figure{margin:24px 0}img{width:100%;height:auto}p{max-width:100ch}@media print{body{background:white}main{margin:0;padding:0;border:0}h2{break-after:avoid}figure{break-inside:avoid}}@media(max-width:650px){main{padding:20px;margin:0}h1{font-size:25px}}
+</style><main><h1>SEQUIN: second-part evaluation report</h1>
+<p>Completed 27 October 2026. Scope: critique, three extensions, comparisons, sensitivity/robustness tests, demonstrations, measured conclusions and future work.</p>
+<h2>1. What was already accomplished and what was missing</h2>
+<div class="scroll"><table>
+<tr><td>Requirement</td><td>Before this work</td><td>Completed in this work</td></tr>
+<tr><td>Critique / limitations</td><td>Detailed source and modeling critique in notes/blueprint</td><td>Paper-linked critique, implications and extension mapping</td></tr>
+<tr><td>2-3 implemented extensions</td><td>One greedy protection prototype; timing multipliers; beam option</td><td>Scenario-aware protection, variable timing, critical-load response</td></tr>
+<tr><td>Multiple baselines</td><td>One protection example with random/flow controls</td><td>Equal-budget random, flow, betweenness, simultaneous, single-scenario and exact designs; four service policies</td></tr>
+<tr><td>Sensitivity / robustness</td><td>No complete extension study</td><td>Held-out demand seeds; shifted demand/ramp; budgets; timing horizons; priority/group-size sensitivity</td></tr>
+<tr><td>Demonstration / explanation</td><td>Generic sequence viewer</td><td>Protection and timing traces; paired priority comparison; speaking guide</td></tr>
+<tr><td>Conclusions / future work</td><td>Hypotheses, no consolidated extension findings</td><td>Measured improvements, ties, failures, limits and future work</td></tr>
+</table></div>
+<p>All 51 inherited tests passed before changes. New tests add exact-table equivalence, robust/outer-defense oracles, analytic priority service, timing accounting and a weighted-objective numerical regression. See the test record for the final suite result.</p>
+<p>Inherited first-part reproduction outputs are preserved and labeled separately. Native Julia/Gurobi search remains license-dependent according to the saved audit; it is not required by any extension here. Full fresh paper reproduction is not claimed.</p>
+<h2>2. Critique and motivation</h2>
+<p>SEQUIN makes a useful contribution by identifying order-sensitive outages with stateful DC operator response and guided network screening. Its model does not select preparedness investments, treats served MW uniformly, and uses fixed response epochs. Candidate screening is heuristic; a prefix range is not a certificate over unseen continuations. Irreversible shedding and myopic dispatch can lock in choices that are poor for future failures. DC steady states also omit AC voltages, reactive power, relay/frequency behavior and transient stability.</p>
+<p>These points motivate the three extensions below. Exact paper-page references, mathematical objectives, baseline definitions, sampling policies and novelty boundaries are in <a href="../../PART2_METHODS.md">the methods document</a>. Protection is already a topic in the broader literature; these are extensions relative to the selected SEQUIN workflow, not claims of entirely new research fields.</p>
+<h2>3. Extension 1: scenario-aware budgeted protection</h2>
+<p>Design on demand seeds 0/1/2; freeze decisions before testing seeds 100-104. Use cases 14/39, k=2, and budgets 0-3. Evaluate every eligible ordered pair exactly under the deterministic DC response policy, including an adaptive post-protection maximum. Greedy robust design minimizes the maximum design-scenario loss fraction; exact outer design verifies budgets 0-2. Twenty random defense orderings are averaged within each scenario, preserving demand scenario as the statistical unit.</p>
+<p>The table reports five-test-seed means. Reduction is in percentage points of original demand, relative to no protection on the same scenario. Bootstrap intervals are descriptive with only five seeds.</p>
+<div class="scroll"><table>
+<tr><td>Case</td><td>Budget</td><td>Policy</td><td>Mean shed</td><td>Reduction pp</td><td>95% bootstrap interval pp</td></tr>
+<tr><td>14</td><td>1</td><td>robust-sequential</td><td>94.63%</td><td>5.37</td><td>[0.00, 10.75]</td></tr>
+<tr><td>14</td><td>1</td><td>initial-flow</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>14</td><td>1</td><td>betweenness</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>14</td><td>1</td><td>random-mean</td><td>99.73%</td><td>0.27</td><td>[0.00, 0.54]</td></tr>
+<tr><td>14</td><td>1</td><td>single-scenario</td><td>94.63%</td><td>5.37</td><td>[0.00, 10.75]</td></tr>
+<tr><td>14</td><td>1</td><td>simultaneous-design</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>14</td><td>1</td><td>exact-design</td><td>94.63%</td><td>5.37</td><td>[0.00, 10.75]</td></tr>
+<tr><td>14</td><td>2</td><td>robust-sequential</td><td>85.77%</td><td>14.23</td><td>[13.42, 15.09]</td></tr>
+<tr><td>14</td><td>2</td><td>initial-flow</td><td>94.63%</td><td>5.37</td><td>[0.00, 10.75]</td></tr>
+<tr><td>14</td><td>2</td><td>betweenness</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>14</td><td>2</td><td>random-mean</td><td>99.20%</td><td>0.80</td><td>[0.00, 1.61]</td></tr>
+<tr><td>14</td><td>2</td><td>single-scenario</td><td>94.63%</td><td>5.37</td><td>[0.00, 10.75]</td></tr>
+<tr><td>14</td><td>2</td><td>simultaneous-design</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>14</td><td>2</td><td>exact-design</td><td>85.77%</td><td>14.23</td><td>[13.42, 15.09]</td></tr>
+<tr><td>14</td><td>3</td><td>robust-sequential</td><td>85.77%</td><td>14.23</td><td>[13.42, 15.09]</td></tr>
+<tr><td>14</td><td>3</td><td>initial-flow</td><td>94.63%</td><td>5.37</td><td>[0.00, 10.75]</td></tr>
+<tr><td>14</td><td>3</td><td>betweenness</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>14</td><td>3</td><td>random-mean</td><td>99.20%</td><td>0.80</td><td>[0.00, 1.61]</td></tr>
+<tr><td>14</td><td>3</td><td>single-scenario</td><td>94.44%</td><td>5.56</td><td>[0.00, 11.14]</td></tr>
+<tr><td>14</td><td>3</td><td>simultaneous-design</td><td>100.00%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>39</td><td>1</td><td>robust-sequential</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>1</td><td>initial-flow</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>1</td><td>betweenness</td><td>20.62%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>39</td><td>1</td><td>random-mean</td><td>20.62%</td><td>0.00</td><td>[0.00, 0.01]</td></tr>
+<tr><td>39</td><td>1</td><td>single-scenario</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>1</td><td>simultaneous-design</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>1</td><td>exact-design</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>2</td><td>robust-sequential</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>2</td><td>initial-flow</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>2</td><td>betweenness</td><td>20.62%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>39</td><td>2</td><td>random-mean</td><td>20.62%</td><td>0.00</td><td>[0.00, 0.01]</td></tr>
+<tr><td>39</td><td>2</td><td>single-scenario</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>2</td><td>simultaneous-design</td><td>20.42%</td><td>0.20</td><td>[0.11, 0.27]</td></tr>
+<tr><td>39</td><td>2</td><td>exact-design</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>3</td><td>robust-sequential</td><td>17.88%</td><td>2.74</td><td>[2.62, 2.83]</td></tr>
+<tr><td>39</td><td>3</td><td>initial-flow</td><td>20.44%</td><td>0.18</td><td>[0.08, 0.27]</td></tr>
+<tr><td>39</td><td>3</td><td>betweenness</td><td>20.62%</td><td>0.00</td><td>[0.00, 0.00]</td></tr>
+<tr><td>39</td><td>3</td><td>random-mean</td><td>20.62%</td><td>0.01</td><td>[0.00, 0.02]</td></tr>
+<tr><td>39</td><td>3</td><td>single-scenario</td><td>17.88%</td><td>2.74</td><td>[2.62, 2.83]</td></tr>
+<tr><td>39</td><td>3</td><td>simultaneous-design</td><td>17.88%</td><td>2.74</td><td>[2.62, 2.83]</td></tr>
+</table></div>
+<figure><img alt="Protection across budgets" src="protection.png"></figure>
+<p>Case 14, budget 2: robust design protects [3, 4], reduces held-out mean loss by 14.23 percentage points (66.08 MW), versus 5.37 points for initial-flow protection. Its worst-design-scenario greedy gap to the exact outer optimum is 0.000000 percentage points.</p>
+<p>Case 39, budget 2: robust design protects [14, 1], reduces held-out mean loss by 0.18 percentage points (18.50 MW), versus 0.18 points for initial-flow protection. Its worst-design-scenario greedy gap to the exact outer optimum is 0.000000 percentage points.</p>
+<h3>Stress test and negative result</h3>
+<p>With design choices frozen, robust protection is worse than initial-flow protection in 11 of 42 feasible paired stress cells (cells are not independent samples). The largest excess loss is 39.90 percentage points at case/seed/ramp/perturbation/budget = (&#x27;14&#x27;, &#x27;100&#x27;, &#x27;0.5&#x27;, &#x27;0.15&#x27;, &#x27;2&#x27;). Scenario-aware design at one ramp setting does not establish robustness to changed operating flexibility. Separately, 18 requested stress policy rows have an infeasible fully served starting scenario; these are recorded explicitly and excluded from loss averages, without resampling or inventing a dispatch.</p>
+<figure><img alt="Protection stress sensitivity" src="sensitivity.png"></figure>
+<h2>4. Extension 2: variable timing with matched observation horizons</h2>
+<p>Cases 14/39/118, three demand seeds, k=3, horizons 7.5/15/30 minutes, and even/early/late patterns. For each scenario, freeze the union of permutations of SEQUIN and flow-greedy outage sets. Both sequential and simultaneous comparators use the same windows, horizon and number of dispatch opportunities. The simultaneous set fails in the first window. Derived rates assume alpha=0.1 per five-minute reference epoch; they are experimental rates, not equipment measurements.</p>
+<p><strong>The MWh result is a snapshot unserved-energy proxy.</strong> Each response receives its window&#x27;s ramp allowance, and its endpoint shed is charged over that whole window: sum(shed MW * window minutes / 60). No continuous ramp trajectory or intra-window service is simulated. This is a bounded discrete extension, not exact physical energy not served. Final MW and the MWh proxy answer different questions.</p>
+<div class="scroll"><table>
+<tr><td>Case</td><td>15-minute pattern</td><td>Comparator</td><td>Mean cohort-worst final loss</td><td>Mean cohort-worst snapshot energy loss</td></tr>
+<tr><td>14</td><td>even</td><td>sequential</td><td>100.00%</td><td>81.63%</td></tr>
+<tr><td>14</td><td>even</td><td>simultaneous</td><td>81.63%</td><td>81.63%</td></tr>
+<tr><td>14</td><td>early-cluster</td><td>sequential</td><td>91.34%</td><td>88.90%</td></tr>
+<tr><td>14</td><td>early-cluster</td><td>simultaneous</td><td>85.63%</td><td>85.63%</td></tr>
+<tr><td>14</td><td>late-cluster</td><td>sequential</td><td>100.00%</td><td>73.62%</td></tr>
+<tr><td>14</td><td>late-cluster</td><td>simultaneous</td><td>73.62%</td><td>73.62%</td></tr>
+<tr><td>39</td><td>even</td><td>sequential</td><td>30.03%</td><td>20.76%</td></tr>
+<tr><td>39</td><td>even</td><td>simultaneous</td><td>31.87%</td><td>31.87%</td></tr>
+<tr><td>39</td><td>early-cluster</td><td>sequential</td><td>29.99%</td><td>28.56%</td></tr>
+<tr><td>39</td><td>early-cluster</td><td>simultaneous</td><td>34.45%</td><td>34.45%</td></tr>
+<tr><td>39</td><td>late-cluster</td><td>sequential</td><td>32.11%</td><td>11.66%</td></tr>
+<tr><td>39</td><td>late-cluster</td><td>simultaneous</td><td>29.99%</td><td>29.99%</td></tr>
+<tr><td>118</td><td>even</td><td>sequential</td><td>26.46%</td><td>16.51%</td></tr>
+<tr><td>118</td><td>even</td><td>simultaneous</td><td>24.05%</td><td>24.05%</td></tr>
+<tr><td>118</td><td>early-cluster</td><td>sequential</td><td>33.95%</td><td>31.58%</td></tr>
+<tr><td>118</td><td>early-cluster</td><td>simultaneous</td><td>28.30%</td><td>28.30%</td></tr>
+<tr><td>118</td><td>late-cluster</td><td>sequential</td><td>34.67%</td><td>7.21%</td></tr>
+<tr><td>118</td><td>late-cluster</td><td>simultaneous</td><td>16.06%</td><td>16.06%</td></tr>
+</table></div>
+<p>The final-loss maximum and energy-loss maximum can occur on different sequences. Values above average each scenario&#x27;s cohort maximum across three seeds. Larger-case cohort maxima are not global worst-case certificates. Simultaneous and sequential event placement differs even after matching control opportunities; no universal ordering claim follows.</p>
+<figure><img alt="Timing and snapshot-energy sensitivity" src="timing.png"></figure>
+<h2>5. Extension 3: critical-service-aware response</h2>
+<p>Groups are synthetic random subsets of positive-load buses, fixed with group seed 17 and exported as original bus IDs. Compare total MW service, critical weights 2 and 10, and lexicographic critical-first service. All policies start from the same economic dispatch. The main ramp sweep uses a 25% group; 10% and 50% groups test size/composition sensitivity at nominal ramp. Different-size groups need not be nested, and only one assignment per size is tested. Three demand seeds per case are used.</p>
+<p>Case 14 checks all 380 ordered pairs. Larger cases use a common union of sequences from three total-service searches plus SEQUIN under each priority policy (breadth 2); every policy is replayed on the full union. This is stronger than comparing separate policy-specific samples, but does not certify the worst critical-targeted attack in those larger networks.</p>
+<div class="scroll"><table>
+<tr><td>Case</td><td>Policy</td><td>Mean worst critical demand retained</td><td>Mean worst total shed MW</td><td>Coverage</td></tr>
+<tr><td>14</td><td>total</td><td>0.00%</td><td>459.46</td><td>exact pairs</td></tr>
+<tr><td>14</td><td>weight-2</td><td>0.00%</td><td>459.46</td><td>exact pairs</td></tr>
+<tr><td>14</td><td>weight-10</td><td>0.00%</td><td>459.46</td><td>exact pairs</td></tr>
+<tr><td>14</td><td>critical-first</td><td>0.00%</td><td>459.46</td><td>exact pairs</td></tr>
+<tr><td>39</td><td>total</td><td>74.29%</td><td>2131.05</td><td>shared cohort</td></tr>
+<tr><td>39</td><td>weight-2</td><td>100.00%</td><td>2133.72</td><td>shared cohort</td></tr>
+<tr><td>39</td><td>weight-10</td><td>100.00%</td><td>2133.72</td><td>shared cohort</td></tr>
+<tr><td>39</td><td>critical-first</td><td>100.00%</td><td>2133.72</td><td>shared cohort</td></tr>
+<tr><td>118</td><td>total</td><td>82.93%</td><td>1085.85</td><td>shared cohort</td></tr>
+<tr><td>118</td><td>weight-2</td><td>99.37%</td><td>1075.90</td><td>shared cohort</td></tr>
+<tr><td>118</td><td>weight-10</td><td>100.00%</td><td>1095.15</td><td>shared cohort</td></tr>
+<tr><td>118</td><td>critical-first</td><td>100.00%</td><td>1096.93</td><td>shared cohort</td></tr>
+</table></div>
+<figure><img alt="Priority and ramp sensitivity" src="priority.png"></figure>
+<p>Across 6,197 paired sequence/configuration rows, weight-2 improves critical service in 2,448, worsens final critical service in 40, and increases total shed in 1,459, using a 0.001 MW change threshold. These counts describe deterministic repeated evaluations, not independent statistical observations. Myopic priority choices are not a guarantee about later service.</p>
+<p>Across 6,197 paired sequence/configuration rows, weight-10 improves critical service in 2,986, worsens final critical service in 68, and increases total shed in 2,067, using a 0.001 MW change threshold. These counts describe deterministic repeated evaluations, not independent statistical observations. Myopic priority choices are not a guarantee about later service.</p>
+<p>Across 6,197 paired sequence/configuration rows, critical-first improves critical service in 2,974, worsens final critical service in 82, and increases total shed in 2,086, using a 0.001 MW change threshold. These counts describe deterministic repeated evaluations, not independent statistical observations. Myopic priority choices are not a guarantee about later service.</p>
+<p>The illustrative paired demo uses case 39, demand seed 1, ramp 0.1, sequence [14, 37], and synthetic critical buses [1, 3, 4, 8, 12, 16, 18, 20, 23, 26, 28]. Critical-first retains 1676.64 MW more critical service; total shed changes by +957.25 MW. This example was selected for its largest observed critical gain and is explicitly not a representative average.</p>
+<p><a href="demo_critical/comparison.html">Open the paired comparison</a>, <a href="demo_critical/total.html">total-service trace</a>, or <a href="demo_critical/critical-first.html">critical-first trace</a>.</p>
+<h2>6. Validation, reproducibility and artifacts</h2>
+<p>Saved rows: 1,648 main protection, 144 requested protection stress (126 feasible), 1,620 timing, and 24,788 priority evaluations. Maximum reported primal/bound/integrality residual over the exported feasible evaluation rows is 1e-08 per-unit, below the simulator acceptance threshold of 2e-6. The largest recorded normalized priority-service floor tolerance is 6.55e-06 p.u. A full raw-data audit independently replays selected results and checks cohort pairing and energy arithmetic.</p>
+<p>Run <code>.venv/Scripts/python.exe -m pytest -q</code>, then <code>.venv/Scripts/python.exe scripts/run_part2.py</code>, then <code>.venv/Scripts/python.exe scripts/build_part2_report.py</code>. The suite supports separate protection/timing/priority/report phases and checkpoints exact oracle tables. Dependencies and source/scenario fingerprints are saved. Timings collected with concurrent processes are functional compute measurements, not controlled runtime comparisons with the paper.</p>
+<p>Raw files: <a href="protection.csv">protection</a>, <a href="defense_designs.json">defense designs</a>, <a href="protection_sensitivity.csv">stress tests</a>, <a href="timing.csv">timing</a>, <a href="priority.csv">priority</a>, <a href="critical_groups.json">critical groups</a>, <a href="summary.json">analysis</a>, <a href="run_manifest.json">run manifest</a>, and exact tables in <code>oracles/</code>. See <a href="../../PART2_DEMO_GUIDE.md">the demonstration guide</a>, <a href="validation.json">test record</a>, and <a href="data_audit.json">independent data audit</a>. Core and transitive dependency versions are pinned in <a href="../../requirements-part2-lock.txt">the extension lock file</a>.</p>
+<p><a href="demo_protection_14.html">Protection demo: case 14</a>, <a href="demo_protection_39.html">protection demo: case 39</a>, <a href="demo_timing/viewer.html">timing demo</a>, and <a href="demo_critical/paired_comparison.json">critical-service paired comparison</a>.</p>
+<h2>7. Conclusions and future work</h2>
+<p>The second-part work is implemented and evaluated within the stated scope. Adaptive protection can improve tested resilience, but nominal scenario robustness does not imply robustness to changed ramp flexibility. Timing patterns and observation windows change the measured consequences, so MW and snapshot-weighted MWh must be kept separate. Critical-first operation can retain important synthetic service while shifting loss to other consumers; myopic operation and severe isolation still limit what priorities can achieve. Saturation and ties are valid negative results.</p>
+<p>Next steps are joint demand/ramp scenario design; nonuniform protection costs and imperfect hardening; larger-k independent outage searches; physical ramp trajectories and calibrated observation times; critical-demand fractions within a bus; storage with state of charge; restoration and reconnection; and AC/transient validation. Stronger claims require more held-out scenarios, actual critical-facility data and operational validation.</p>
+<h2>Sources and attribution</h2>
+<p>Selected paper: Chio et al., ICCPS 2025, <a href="https://doi.org/10.1145/3716550.3722029">DOI</a>. <a href="https://github.com/andrewgchio/SEQUIN">Authors&#x27; implementation</a>. Related protection model: Mastin et al., <a href="https://pubsonline.informs.org/doi/abs/10.1287/ijoo.2022.0081">Best Response Intersection</a>. The full critique and source interpretation are documented in <a href="../../PART2_METHODS.md">PART2_METHODS</a>. All measured extension results are from the independent Python/HiGHS model.</p></main></html>

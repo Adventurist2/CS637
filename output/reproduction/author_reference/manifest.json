@@ -1,0 +1,346 @@
+{
+  "source_image": "andrewgchio/iccps-sequin:v1.0.3",
+  "plotter_sha256": "744f6a9a519f1a8ef5600f9b27b2579b6dca6650d07477d1caba2ebe8ce8ffb9",
+  "panels_regenerated": 26,
+  "panels": [
+    {
+      "figure": "5a",
+      "image": "figure_5a.png",
+      "cache": "pglib_opf_case14_ieee__api_exp1.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "5b",
+      "image": "figure_5b.png",
+      "cache": "pglib_opf_case39_epri__api_exp1.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "5c",
+      "image": "figure_5c.png",
+      "cache": "pglib_opf_case60_c_exp1.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "5d",
+      "image": "figure_5d.png",
+      "cache": "pglib_opf_case118_ieee__api_exp1.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "5e",
+      "image": "figure_5e.png",
+      "cache": "pglib_opf_case162_ieee_dtc_exp1.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "5f",
+      "image": "figure_5f.png",
+      "cache": "pglib_opf_case240_pserc_exp1.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "6a",
+      "image": "figure_6a.png",
+      "cache": "pglib_opf_case14_ieee__api_exp2_k4.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "6b",
+      "image": "figure_6b.png",
+      "cache": "pglib_opf_case39_epri__api_exp2_k4.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "6c",
+      "image": "figure_6c.png",
+      "cache": "pglib_opf_case60_c_exp2_k4.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "6d",
+      "image": "figure_6d.png",
+      "cache": "pglib_opf_case118_ieee__api_exp2_k4.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "6e",
+      "image": "figure_6e.png",
+      "cache": "pglib_opf_case162_ieee_dtc_exp2_k4.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "6f",
+      "image": "figure_6f.png",
+      "cache": "pglib_opf_case240_pserc_exp2_k4.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "8a",
+      "image": "figure_8a.png",
+      "cache": "pglib_opf_case14_ieee__api_exp2_k2.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "8b",
+      "image": "figure_8b.png",
+      "cache": "pglib_opf_case39_epri__api_exp2_k2.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "8c",
+      "image": "figure_8c.png",
+      "cache": "pglib_opf_case60_c_exp2_k2.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "8d",
+      "image": "figure_8d.png",
+      "cache": "pglib_opf_case118_ieee__api_exp2_k2.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "8e",
+      "image": "figure_8e.png",
+      "cache": "pglib_opf_case162_ieee_dtc_exp2_k2.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "8f",
+      "image": "figure_8f.png",
+      "cache": "pglib_opf_case240_pserc_exp2_k2.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "9a",
+      "image": "figure_9a.png",
+      "cache": "pglib_opf_case14_ieee__api_exp2_k3.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "9b",
+      "image": "figure_9b.png",
+      "cache": "pglib_opf_case39_epri__api_exp2_k3.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "9c",
+      "image": "figure_9c.png",
+      "cache": "pglib_opf_case60_c_exp2_k3.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "9d",
+      "image": "figure_9d.png",
+      "cache": "pglib_opf_case118_ieee__api_exp2_k3.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "9e",
+      "image": "figure_9e.png",
+      "cache": "pglib_opf_case162_ieee_dtc_exp2_k3.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "9f",
+      "image": "figure_9f.png",
+      "cache": "pglib_opf_case240_pserc_exp2_k3.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "4a",
+      "image": "figure_4a.png",
+      "cache": "pglib_opf_case39_epri__api_exp0.csv",
+      "provenance": "author-supplied cached results"
+    },
+    {
+      "figure": "4b",
+      "image": "figure_4b.png",
+      "cache": "pglib_opf_case118_ieee__api_exp0.csv",
+      "provenance": "author-supplied cached results"
+    }
+  ],
+  "paper_claim_checks_from_author_data": {
+    "pglib_opf_case39_epri__api": {
+      "std_pu": 32.36610247469284,
+      "permutation_count": 6,
+      "permutation_max_pu": 30.011200000000006,
+      "permutation_max_increase_percent": -7.275829632357301,
+      "permutations_at_or_above_std_percent": 0.0,
+      "enumeration_count": 91080,
+      "enumeration_max_increase_percent": 19.315262102365626
+    },
+    "pglib_opf_case118_ieee__api": {
+      "std_pu": 27.831299999999956,
+      "permutation_count": 720,
+      "permutation_max_pu": 41.02490000000001,
+      "permutation_max_increase_percent": 47.405618853593154,
+      "permutations_at_or_above_std_percent": 81.38888888888889,
+      "enumeration_count": 0,
+      "enumeration_max_increase_percent": null
+    }
+  },
+  "cached_files": [
+    {
+      "name": "pglib_opf_case118_ieee__api_exp0.csv",
+      "bytes": 41595,
+      "sha256": "9db0ddffd677be6320318657b13e2063cf9057d4411863a465d0309d1d9d74d8"
+    },
+    {
+      "name": "pglib_opf_case118_ieee__api_exp1.csv",
+      "bytes": 53855,
+      "sha256": "564e4fd8a4c29183aa90a8b3261fff08cc01010bfd31bfe511c6de08ad47f778"
+    },
+    {
+      "name": "pglib_opf_case118_ieee__api_exp2_k2.csv",
+      "bytes": 13566,
+      "sha256": "213dc4cefa05185a3e8d8aae26e5f3e8aed48d5044782c0adea9296d675d7e9a"
+    },
+    {
+      "name": "pglib_opf_case118_ieee__api_exp2_k3.csv",
+      "bytes": 18367,
+      "sha256": "86d2af8e3217eef39a8da38be6c488ae34d8989d837612d1dbdfa2ee6483734b"
+    },
+    {
+      "name": "pglib_opf_case118_ieee__api_exp2_k4.csv",
+      "bytes": 38531,
+      "sha256": "8eadb1146137455d147b9477a4cda416e6a97a0026fbc5bd039ff2082e0849fb"
+    },
+    {
+      "name": "pglib_opf_case118_ieee__api_exp3.csv",
+      "bytes": 7405,
+      "sha256": "f2b0377b7f5e9aef841b09f78434d262ca114b0db8e1a94610769a650683b8fe"
+    },
+    {
+      "name": "pglib_opf_case14_ieee__api_exp1.csv",
+      "bytes": 297941,
+      "sha256": "1cefbc3321cfb31f421b24c20b8f3a034e211056be86ef6378f81e69645da0bd"
+    },
+    {
+      "name": "pglib_opf_case14_ieee__api_exp2_k2.csv",
+      "bytes": 12740,
+      "sha256": "13a14d09872e7b3cd99fb9c65ff6ba1a80378de63872f9b9b9b6d5115d6f6b92"
+    },
+    {
+      "name": "pglib_opf_case14_ieee__api_exp2_k3.csv",
+      "bytes": 17164,
+      "sha256": "64beef098782e85e110729f8b2c5bf5e5b5a379029054d88dc9a66bf4be3c04c"
+    },
+    {
+      "name": "pglib_opf_case14_ieee__api_exp2_k4.csv",
+      "bytes": 34492,
+      "sha256": "6dfe18aa119fca8f62f4d7200bcdb556145fbe21a92cf3d1ec550a5d55809413"
+    },
+    {
+      "name": "pglib_opf_case162_ieee_dtc_exp1.csv",
+      "bytes": 4823,
+      "sha256": "1c4fec41f3367628daebd0516f945583b2b8d430f25a2c73051d37fe9d0880e6"
+    },
+    {
+      "name": "pglib_opf_case162_ieee_dtc_exp2_k2.csv",
+      "bytes": 13424,
+      "sha256": "1f200e6eb7b9c670f23e2d4e6aa5f40abbde18d732c118f7407abf27aff23dd5"
+    },
+    {
+      "name": "pglib_opf_case162_ieee_dtc_exp2_k3.csv",
+      "bytes": 18170,
+      "sha256": "551e859ce17a3a043c9148c2e1c33b0c838d468a551883074795a5cf941bb38c"
+    },
+    {
+      "name": "pglib_opf_case162_ieee_dtc_exp2_k4.csv",
+      "bytes": 37947,
+      "sha256": "077daabcdf2aa1fc4648439e26c465473b8896275ff83478002f0393ca17c8e5"
+    },
+    {
+      "name": "pglib_opf_case240_pserc_exp1.csv",
+      "bytes": 5131,
+      "sha256": "24899d5018665da7973bc499b389b1ec6a6fdc62d560adb841e9b76be8dcce03"
+    },
+    {
+      "name": "pglib_opf_case240_pserc_exp2_k2.csv",
+      "bytes": 13985,
+      "sha256": "2a8a4826bf5a439f49598901938d4b02af4e38bdcce9f9a65a48a1530d63d29a"
+    },
+    {
+      "name": "pglib_opf_case240_pserc_exp2_k3.csv",
+      "bytes": 19570,
+      "sha256": "697a4a6cded2f3e32aaf2e8d42a54572fc03e2a54d4e434846296f84ec9f0083"
+    },
+    {
+      "name": "pglib_opf_case240_pserc_exp2_k4.csv",
+      "bytes": 41475,
+      "sha256": "aecdeff60ff6e2d9d4b91bed5e1d6bea99b32b5457c94aaa08c30e760c87712b"
+    },
+    {
+      "name": "pglib_opf_case39_epri__api_exp0.csv",
+      "bytes": 4075375,
+      "sha256": "932dfcaef9d2820cfb1f65177167a72d62267e3e5ba7f0b769a33c4626a36265"
+    },
+    {
+      "name": "pglib_opf_case39_epri__api_exp1.csv",
+      "bytes": 50489,
+      "sha256": "02051860872aea81f769e9bff56eccb957c0039bee608cf2d30d44c0e812f672"
+    },
+    {
+      "name": "pglib_opf_case39_epri__api_exp2_k2.csv",
+      "bytes": 13490,
+      "sha256": "9f3b3f4108de81270b7ba19f0c2c273acb0718dfe1ab43115c786eed1264bcac"
+    },
+    {
+      "name": "pglib_opf_case39_epri__api_exp2_k3.csv",
+      "bytes": 18402,
+      "sha256": "8ca445d446b8f51930ebf7a598acbf88a660a6f3444b102c853d1f5bed86897f"
+    },
+    {
+      "name": "pglib_opf_case39_epri__api_exp2_k4.csv",
+      "bytes": 37644,
+      "sha256": "9f2013f982cde825a51f67fd1111d271a9337eb06ebb33d5803f9c7f96a43e7a"
+    },
+    {
+      "name": "pglib_opf_case39_epri__api_exp3.csv",
+      "bytes": 7299,
+      "sha256": "a32c7e8a788156b4536a917fe05bb4a8b475afb2fb83e0c8f380482b789c81f0"
+    },
+    {
+      "name": "pglib_opf_case60_c_exp1.csv",
+      "bytes": 52004,
+      "sha256": "29687b97509e4d5a3b5403143251a2ec30b757635e4c15009f471efb1969d654"
+    },
+    {
+      "name": "pglib_opf_case60_c_exp2_k2.csv",
+      "bytes": 12524,
+      "sha256": "c6c870d3a219c6acf6d9b70cbf99adde670bfdd11956a157c2b0abbbdb03004c"
+    },
+    {
+      "name": "pglib_opf_case60_c_exp2_k3.csv",
+      "bytes": 18073,
+      "sha256": "b5a1920e75ef174dd14dde60a4f86fd4441e7cde1a182254e586ff2e95a602db"
+    },
+    {
+      "name": "pglib_opf_case60_c_exp2_k4.csv",
+      "bytes": 37892,
+      "sha256": "c1701671512db8a6f6a5f2c5285dd494156f5666baf674d6dad22193db3cb65a"
+    }
+  ],
+  "runtime_cache_coverage": [
+    {
+      "file": "pglib_opf_case118_ieee__api_exp3.csv",
+      "ks": [
+        3,
+        4
+      ],
+      "nul_bytes": 1
+    },
+    {
+      "file": "pglib_opf_case39_epri__api_exp3.csv",
+      "ks": [
+        3,
+        4
+      ],
+      "nul_bytes": 2
+    }
+  ],
+  "figure_7_status": "Not regenerated: only cases 39/118, k=3/4 ramp-based runtime records supplied; paper requires six cases over k=2..8",
+  "fresh_optimization": false,
+  "plotting_adaptations": "Agg backend, redirected save paths, DPI, figure-number mapping; original data/aggregation unchanged"
+}

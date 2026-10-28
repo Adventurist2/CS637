@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "checks": [
+    "Complete protection matrix; design/test separation; equal budgets; adaptive sequence eligibility; monotonic finite-choice loss",
+    "Every stress request is either feasible or explicitly initial-infeasible, with no invented loss metric",
+    "Fresh current-model exhaustive post-protection searches agree with stored case-14 and case-39 held-out worst loss within 0.001 MW",
+    "Timing has all 9 case/seed combinations, all 18 pattern/horizon/comparator cells, identical per-scenario sequence cohorts, and fresh energy/trace arithmetic checks",
+    "Priority covers 45 scenario/settings cells, all four policies on identical cohorts, exact case-14 pairs, bounded service floors, consistent service metrics and fresh policy replays"
+  ],
+  "fresh_protection_verifications": [
+    {
+      "case": "14",
+      "test_seed": 100,
+      "policy": "robust-sequential",
+      "budget": 2,
+      "fresh_exact_shed_mw": 398.00000100000017,
+      "saved_shed_mw": 398.00000100000017,
+      "difference_mw": 0.0,
+      "sequence": [
+        6,
+        1
+      ],
+      "optimizer_calls": 648
+    },
+    {
+      "case": "39",
+      "test_seed": 100,
+      "policy": "robust-sequential",
+      "budget": 2,
+      "fresh_exact_shed_mw": 2119.0537351149255,
+      "saved_shed_mw": 2119.0537351149255,
+      "difference_mw": 0.0,
+      "sequence": [
+        16,
+        2
+      ],
+      "optimizer_calls": 3887
+    }
+  ],
+  "rows": {
+    "protection": 1648,
+    "stress_feasible": 126,
+    "stress_initial_infeasible": 18,
+    "timing": 1620,
+    "priority": 24788
+  },
+  "raw_sha256": {
+    "protection.csv": "328347824f90d186c468e63862a757fec230a387f3e9a8dd593e36b935c34313",
+    "protection_sensitivity.csv": "ef041dd75d619429e3a0017f396c4a0d00ce8105b39855cc00e1e4234762d77d",
+    "timing.csv": "03f50517548cbe19defe10f6b274903ec6926cf297182c2a52892266085fcc54",
+    "priority.csv": "c8a7ac7f14a5eada8cd543c72eb5b6ed31cfcdd529cf2bdec0731a44e03d4fe9"
+  }
+}

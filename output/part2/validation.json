@@ -1,0 +1,54 @@
+{
+  "tests": {
+    "passed": 69,
+    "failed": 0,
+    "command": ".venv/Scripts/python.exe -m pytest -q",
+    "seconds": 6.83,
+    "output": "69 passed in 6.83s"
+  },
+  "inherited_tests_rerun_before_changes": 51,
+  "new_test_cases": 18,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.17.1",
+      "highspy": "1.15.1",
+      "networkx": "3.6.1",
+      "matplotlib": "3.10.0"
+    },
+    "created_utc": "2026-10-26T21:02:21.989456+00:00"
+  },
+  "artifact_qa": {
+    "local_link_checks": 27,
+    "inline_scripts_syntax_checked": [
+      "output\\part2\\demo_protection_14.html",
+      "output\\part2\\demo_protection_39.html",
+      "output\\part2\\demo_critical\\critical-first.html",
+      "output\\part2\\demo_critical\\total.html",
+      "output\\part2\\demo_critical\\viewer.html",
+      "output\\part2\\demo_timing\\viewer.html"
+    ],
+    "figures_visually_inspected": {
+      "priority.png": [
+        2240,
+        752
+      ],
+      "protection.png": [
+        2080,
+        720
+      ],
+      "sensitivity.png": [
+        1920,
+        720
+      ],
+      "timing.png": [
+        2240,
+        1280
+      ]
+    },
+    "browser_preview": "Unavailable: sandbox localhost was unreachable and browser security policy blocks file URLs. No browser preview is claimed."
+  },
+  "independent_data_audit": "passed"
+}

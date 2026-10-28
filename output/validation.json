@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23",
+  "tests_passed": 49,
+  "suites": {
+    "exact_validation": {
+      "runs": 24,
+      "ok": 24,
+      "errors": []
+    },
+    "benchmarks": {
+      "runs": 54,
+      "ok": 54,
+      "errors": []
+    },
+    "ramp_sweep": {
+      "runs": 30,
+      "ok": 30,
+      "errors": []
+    }
+  },
+  "exact_comparison": [
+    {
+      "seed": 0,
+      "sequin_mw": 452.7801707302616,
+      "enum_mw": 452.7801707302616,
+      "matches_within_1e-4_mw": true
+    },
+    {
+      "seed": 1,
+      "sequin_mw": 460.0620794299047,
+      "enum_mw": 460.0620794299047,
+      "matches_within_1e-4_mw": true
+    },
+    {
+      "seed": 2,
+      "sequin_mw": 465.5449636294457,
+      "enum_mw": 465.5449636294457,
+      "matches_within_1e-4_mw": true
+    }
+  ],
+  "order_effect_mw": {
+    "min": 375.00000300000005,
+    "max": 462.96999999999997
+  },
+  "scope": "Independent implementation functional validation, not full original-artifact reproduction"
+}

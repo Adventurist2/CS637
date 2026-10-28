@@ -1,0 +1,111 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "highspy": "1.15.1",
+      "networkx": "3.7",
+      "matplotlib": "3.11.2"
+    },
+    "created_utc": "2026-10-23T10:04:31.878116+00:00"
+  },
+  "scenario": {
+    "case": "pglib_opf_case14_ieee__api",
+    "base_mva": 100.0,
+    "buses": 14,
+    "branches": 20,
+    "generators": 5,
+    "demand_mw": 452.7801707302616,
+    "source_sha256": "fab784110302c1c7d1dc8d74c5d133bb056be15af44fbe5933ebdc20e077962c",
+    "negative_load_clipped_mw": 0.0,
+    "negative_load_injection_mw": 0.0,
+    "negative_load_policy": "fixed injection at initialization, curtailable and nonrecoverable thereafter",
+    "seed": 0,
+    "perturbation": 0.05
+  },
+  "settings": {
+    "command": "protect",
+    "case": "14",
+    "seed": 0,
+    "perturb": 0.05,
+    "ramp": 0.1,
+    "tie_break": "cost",
+    "mip_gap": 1e-08,
+    "solver_timeout": 60,
+    "output": "output/protection",
+    "k": 2,
+    "method": "sequin",
+    "breadth": 3,
+    "max_sequences": 50000,
+    "budget": 1,
+    "verify_exact": true
+  },
+  "result": {
+    "protected_lines": [
+      3
+    ],
+    "baseline_shed_mw": 452.7801707302616,
+    "remaining_shed_mw": 393.72845946025876,
+    "reduction_mw": 59.05171127000284,
+    "adaptive_sequence": [
+      15,
+      1
+    ],
+    "history": [
+      {
+        "step": 1,
+        "protected_line": 3,
+        "worst_found_shed_mw": 393.72845946025876,
+        "adaptive_sequence": [
+          15,
+          1
+        ],
+        "candidates_evaluated": 20
+      }
+    ],
+    "guarantee": "heuristic worst-found disruption; not a certified worst-case bound"
+  },
+  "baselines": {
+    "random": {
+      "protected_lines": [
+        18
+      ],
+      "shed_mw": 452.7801707302616,
+      "adaptive_sequence": [
+        3,
+        1
+      ]
+    },
+    "initial-flow": {
+      "protected_lines": [
+        1
+      ],
+      "shed_mw": 452.7801707302616,
+      "adaptive_sequence": [
+        3,
+        6
+      ]
+    }
+  },
+  "independent_validation": {
+    "method": "exhaustive ordered sequences under the same response policy",
+    "result": {
+      "method": "enum",
+      "sequence": [
+        10,
+        1
+      ],
+      "shed_mw": 398.00000100000005,
+      "seconds": 28.558833400005824,
+      "response_evaluations": 361,
+      "optimizer_calls": 722,
+      "exhaustive": true,
+      "simultaneous": false,
+      "sequences_explored": 342,
+      "max_residual_pu": 1.3322676295501878e-15
+    }
+  },
+  "seconds": 141.5202724999981
+}

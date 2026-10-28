@@ -1,0 +1,11 @@
+{
+  "output": "output/reproduction/original_quick_probe",
+  "jobs": [
+    {
+      "id": "probe_14",
+      "case": "14",
+      "method": "probe",
+      "perturb": false
+    }
+  ]
+}
