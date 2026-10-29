@@ -1,0 +1,6 @@
+test,status,reason
+case14 exact sequential k=3,NOT RUN BY DEFAULT,"6,840 ordered sequences and >20k defender solves; k=2 exact enumeration is retained as ground truth."
+case240 independent guided,FULL MODE ONLY,Top-10 guided search requires many large MILPs; same-sequence replay and Greedy-FLOW still evaluate Case 240 by default.
+large-case Greedy-IMPACT,SELECTIVE,"Every remaining line is solved each round, so 162/240 full sweeps are intentionally not forced."
+exact author randomized loads,UNAVAILABLE,Released experiments use fresh ±5% random load perturbations without storing the RNG state.
+PowerModels feature parity,PARTIAL,"Core DC/ramp/on-off/island constraints are implemented, but this is not a complete PowerModels reimplementation."

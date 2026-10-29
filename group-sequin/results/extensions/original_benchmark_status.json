@@ -1,0 +1,7 @@
+{
+  "driver_exit_code": 0,
+  "checker_exit_code": 1,
+  "plot_exit_code": 0,
+  "description": "The original default benchmark driver completed and produced 311 measured rows and all seven plots. Its unchanged check_results.py failed the six-case flow-coverage assertion because one expected result was skipped after an unsuccessful defender response. This run does not support the original README's broad exact-match claims. Measured reference errors and missing settings are preserved.",
+  "checker_output": "AssertionError: expected k=2..8 for every six-case flow sweep."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "policy": "critical-first",
+    "pairs": 5824,
+    "critical_improves": 2916,
+    "critical_worsens": 75,
+    "extra_total_shed": 1835,
+    "maximum_critical_gain_mw": 1573.4343518963983,
+    "maximum_critical_harm_mw": 239.82767903745193
+  },
+  {
+    "policy": "total",
+    "pairs": 5824,
+    "critical_improves": 6,
+    "critical_worsens": 5,
+    "extra_total_shed": 6,
+    "maximum_critical_gain_mw": 473.9029504538263,
+    "maximum_critical_harm_mw": 43.02285828384953
+  },
+  {
+    "policy": "weight-10",
+    "pairs": 5824,
+    "critical_improves": 2929,
+    "critical_worsens": 56,
+    "extra_total_shed": 1789,
+    "maximum_critical_gain_mw": 1573.4343518963983,
+    "maximum_critical_harm_mw": 239.82767903745142
+  },
+  {
+    "policy": "weight-2",
+    "pairs": 5824,
+    "critical_improves": 2417,
+    "critical_worsens": 43,
+    "extra_total_shed": 1205,
+    "maximum_critical_gain_mw": 1573.4343518963983,
+    "maximum_critical_harm_mw": 239.82767903745147
+  }
+]

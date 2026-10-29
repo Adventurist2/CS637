@@ -1,0 +1,774 @@
+[
+  {
+    "case": "14",
+    "budget": 0,
+    "policies": {
+      "robust-sequential": [],
+      "single-scenario": [],
+      "simultaneous-design": [],
+      "initial-flow": [],
+      "betweenness": [],
+      "exact-design": [],
+      "random-00": [],
+      "random-01": [],
+      "random-02": [],
+      "random-03": [],
+      "random-04": [],
+      "random-05": [],
+      "random-06": [],
+      "random-07": [],
+      "random-08": [],
+      "random-09": [],
+      "random-10": [],
+      "random-11": [],
+      "random-12": [],
+      "random-13": [],
+      "random-14": [],
+      "random-15": [],
+      "random-16": [],
+      "random-17": [],
+      "random-18": [],
+      "random-19": []
+    },
+    "robust_design_objective": [
+      0.9510156202967743,
+      0.9504132119791405
+    ],
+    "exact_design_objective": [
+      0.9510156202967743,
+      0.9504132119791405
+    ]
+  },
+  {
+    "case": "14",
+    "budget": 1,
+    "policies": {
+      "robust-sequential": [
+        4
+      ],
+      "single-scenario": [
+        3
+      ],
+      "simultaneous-design": [
+        1
+      ],
+      "initial-flow": [
+        1
+      ],
+      "betweenness": [
+        10
+      ],
+      "exact-design": [
+        4
+      ],
+      "random-00": [
+        5
+      ],
+      "random-01": [
+        6
+      ],
+      "random-02": [
+        7
+      ],
+      "random-03": [
+        3
+      ],
+      "random-04": [
+        12
+      ],
+      "random-05": [
+        14
+      ],
+      "random-06": [
+        7
+      ],
+      "random-07": [
+        15
+      ],
+      "random-08": [
+        12
+      ],
+      "random-09": [
+        2
+      ],
+      "random-10": [
+        1
+      ],
+      "random-11": [
+        2
+      ],
+      "random-12": [
+        4
+      ],
+      "random-13": [
+        9
+      ],
+      "random-14": [
+        2
+      ],
+      "random-15": [
+        2
+      ],
+      "random-16": [
+        8
+      ],
+      "random-17": [
+        17
+      ],
+      "random-18": [
+        15
+      ],
+      "random-19": [
+        10
+      ]
+    },
+    "robust_design_objective": [
+      0.9510156202967625,
+      0.9504132119791363
+    ],
+    "exact_design_objective": [
+      0.9510156202967625,
+      0.9504132119791363
+    ]
+  },
+  {
+    "case": "14",
+    "budget": 2,
+    "policies": {
+      "robust-sequential": [
+        4,
+        3
+      ],
+      "single-scenario": [
+        3,
+        4
+      ],
+      "simultaneous-design": [
+        1,
+        5
+      ],
+      "initial-flow": [
+        1,
+        3
+      ],
+      "betweenness": [
+        10,
+        7
+      ],
+      "exact-design": [
+        3,
+        4
+      ],
+      "random-00": [
+        5,
+        17
+      ],
+      "random-01": [
+        6,
+        16
+      ],
+      "random-02": [
+        7,
+        14
+      ],
+      "random-03": [
+        3,
+        20
+      ],
+      "random-04": [
+        12,
+        4
+      ],
+      "random-05": [
+        14,
+        2
+      ],
+      "random-06": [
+        7,
+        3
+      ],
+      "random-07": [
+        15,
+        20
+      ],
+      "random-08": [
+        12,
+        1
+      ],
+      "random-09": [
+        2,
+        17
+      ],
+      "random-10": [
+        1,
+        5
+      ],
+      "random-11": [
+        2,
+        1
+      ],
+      "random-12": [
+        4,
+        19
+      ],
+      "random-13": [
+        9,
+        3
+      ],
+      "random-14": [
+        2,
+        11
+      ],
+      "random-15": [
+        2,
+        7
+      ],
+      "random-16": [
+        8,
+        11
+      ],
+      "random-17": [
+        17,
+        20
+      ],
+      "random-18": [
+        15,
+        6
+      ],
+      "random-19": [
+        10,
+        1
+      ]
+    },
+    "robust_design_objective": [
+      0.8601930756437216,
+      0.8545467656067213
+    ],
+    "exact_design_objective": [
+      0.8601930756437216,
+      0.8545467656067213
+    ]
+  },
+  {
+    "case": "14",
+    "budget": 3,
+    "policies": {
+      "robust-sequential": [
+        4,
+        3,
+        8
+      ],
+      "single-scenario": [
+        3,
+        4,
+        8
+      ],
+      "simultaneous-design": [
+        1,
+        5,
+        2
+      ],
+      "initial-flow": [
+        1,
+        3,
+        2
+      ],
+      "betweenness": [
+        10,
+        7,
+        9
+      ],
+      "random-00": [
+        5,
+        17,
+        2
+      ],
+      "random-01": [
+        6,
+        16,
+        2
+      ],
+      "random-02": [
+        7,
+        14,
+        11
+      ],
+      "random-03": [
+        3,
+        20,
+        13
+      ],
+      "random-04": [
+        12,
+        4,
+        8
+      ],
+      "random-05": [
+        14,
+        2,
+        7
+      ],
+      "random-06": [
+        7,
+        3,
+        14
+      ],
+      "random-07": [
+        15,
+        20,
+        6
+      ],
+      "random-08": [
+        12,
+        1,
+        7
+      ],
+      "random-09": [
+        2,
+        17,
+        19
+      ],
+      "random-10": [
+        1,
+        5,
+        15
+      ],
+      "random-11": [
+        2,
+        1,
+        8
+      ],
+      "random-12": [
+        4,
+        19,
+        8
+      ],
+      "random-13": [
+        9,
+        3,
+        17
+      ],
+      "random-14": [
+        2,
+        11,
+        6
+      ],
+      "random-15": [
+        2,
+        7,
+        9
+      ],
+      "random-16": [
+        8,
+        11,
+        6
+      ],
+      "random-17": [
+        17,
+        20,
+        7
+      ],
+      "random-18": [
+        15,
+        6,
+        19
+      ],
+      "random-19": [
+        10,
+        1,
+        8
+      ]
+    },
+    "robust_design_objective": [
+      0.8601930756437203,
+      0.8545467656067208
+    ],
+    "exact_design_objective": null
+  },
+  {
+    "case": "39",
+    "budget": 0,
+    "policies": {
+      "robust-sequential": [],
+      "single-scenario": [],
+      "simultaneous-design": [],
+      "initial-flow": [],
+      "betweenness": [],
+      "exact-design": [],
+      "random-00": [],
+      "random-01": [],
+      "random-02": [],
+      "random-03": [],
+      "random-04": [],
+      "random-05": [],
+      "random-06": [],
+      "random-07": [],
+      "random-08": [],
+      "random-09": [],
+      "random-10": [],
+      "random-11": [],
+      "random-12": [],
+      "random-13": [],
+      "random-14": [],
+      "random-15": [],
+      "random-16": [],
+      "random-17": [],
+      "random-18": [],
+      "random-19": []
+    },
+    "robust_design_objective": [
+      0.2089949253626544,
+      0.2056836991582336
+    ],
+    "exact_design_objective": [
+      0.2089949253626544,
+      0.2056836991582336
+    ]
+  },
+  {
+    "case": "39",
+    "budget": 1,
+    "policies": {
+      "robust-sequential": [
+        14
+      ],
+      "single-scenario": [
+        14
+      ],
+      "simultaneous-design": [
+        14
+      ],
+      "initial-flow": [
+        14
+      ],
+      "betweenness": [
+        24
+      ],
+      "exact-design": [
+        14
+      ],
+      "random-00": [
+        24
+      ],
+      "random-01": [
+        23
+      ],
+      "random-02": [
+        13
+      ],
+      "random-03": [
+        24
+      ],
+      "random-04": [
+        4
+      ],
+      "random-05": [
+        29
+      ],
+      "random-06": [
+        24
+      ],
+      "random-07": [
+        42
+      ],
+      "random-08": [
+        46
+      ],
+      "random-09": [
+        26
+      ],
+      "random-10": [
+        15
+      ],
+      "random-11": [
+        22
+      ],
+      "random-12": [
+        25
+      ],
+      "random-13": [
+        21
+      ],
+      "random-14": [
+        21
+      ],
+      "random-15": [
+        33
+      ],
+      "random-16": [
+        2
+      ],
+      "random-17": [
+        24
+      ],
+      "random-18": [
+        30
+      ],
+      "random-19": [
+        35
+      ]
+    },
+    "robust_design_objective": [
+      0.20387582370634927,
+      0.20044613015376975
+    ],
+    "exact_design_objective": [
+      0.20387582370634927,
+      0.20044613015376975
+    ]
+  },
+  {
+    "case": "39",
+    "budget": 2,
+    "policies": {
+      "robust-sequential": [
+        14,
+        1
+      ],
+      "single-scenario": [
+        14,
+        1
+      ],
+      "simultaneous-design": [
+        14,
+        23
+      ],
+      "initial-flow": [
+        14,
+        46
+      ],
+      "betweenness": [
+        24,
+        25
+      ],
+      "exact-design": [
+        1,
+        14
+      ],
+      "random-00": [
+        24,
+        42
+      ],
+      "random-01": [
+        23,
+        27
+      ],
+      "random-02": [
+        13,
+        44
+      ],
+      "random-03": [
+        24,
+        33
+      ],
+      "random-04": [
+        4,
+        42
+      ],
+      "random-05": [
+        29,
+        21
+      ],
+      "random-06": [
+        24,
+        7
+      ],
+      "random-07": [
+        42,
+        38
+      ],
+      "random-08": [
+        46,
+        5
+      ],
+      "random-09": [
+        26,
+        40
+      ],
+      "random-10": [
+        15,
+        45
+      ],
+      "random-11": [
+        22,
+        17
+      ],
+      "random-12": [
+        25,
+        4
+      ],
+      "random-13": [
+        21,
+        12
+      ],
+      "random-14": [
+        21,
+        13
+      ],
+      "random-15": [
+        33,
+        36
+      ],
+      "random-16": [
+        2,
+        8
+      ],
+      "random-17": [
+        24,
+        34
+      ],
+      "random-18": [
+        30,
+        35
+      ],
+      "random-19": [
+        35,
+        43
+      ]
+    },
+    "robust_design_objective": [
+      0.20387582370634913,
+      0.2004461301537697
+    ],
+    "exact_design_objective": [
+      0.20387582370634913,
+      0.2004461301537697
+    ]
+  },
+  {
+    "case": "39",
+    "budget": 3,
+    "policies": {
+      "robust-sequential": [
+        14,
+        1,
+        2
+      ],
+      "single-scenario": [
+        14,
+        1,
+        2
+      ],
+      "simultaneous-design": [
+        14,
+        23,
+        2
+      ],
+      "initial-flow": [
+        14,
+        46,
+        10
+      ],
+      "betweenness": [
+        24,
+        25,
+        26
+      ],
+      "random-00": [
+        24,
+        42,
+        7
+      ],
+      "random-01": [
+        23,
+        27,
+        41
+      ],
+      "random-02": [
+        13,
+        44,
+        38
+      ],
+      "random-03": [
+        24,
+        33,
+        46
+      ],
+      "random-04": [
+        4,
+        42,
+        26
+      ],
+      "random-05": [
+        29,
+        21,
+        34
+      ],
+      "random-06": [
+        24,
+        7,
+        34
+      ],
+      "random-07": [
+        42,
+        38,
+        39
+      ],
+      "random-08": [
+        46,
+        5,
+        9
+      ],
+      "random-09": [
+        26,
+        40,
+        31
+      ],
+      "random-10": [
+        15,
+        45,
+        24
+      ],
+      "random-11": [
+        22,
+        17,
+        18
+      ],
+      "random-12": [
+        25,
+        4,
+        43
+      ],
+      "random-13": [
+        21,
+        12,
+        3
+      ],
+      "random-14": [
+        21,
+        13,
+        24
+      ],
+      "random-15": [
+        33,
+        36,
+        25
+      ],
+      "random-16": [
+        2,
+        8,
+        33
+      ],
+      "random-17": [
+        24,
+        34,
+        5
+      ],
+      "random-18": [
+        30,
+        35,
+        33
+      ],
+      "random-19": [
+        35,
+        43,
+        39
+      ]
+    },
+    "robust_design_objective": [
+      0.1736394190219623,
+      0.1700137532418742
+    ],
+    "exact_design_objective": null
+  }
+]

@@ -1,0 +1,145 @@
+case,seed,ramp,perturb,budget,policy,status,protected,shed_mw,shed_fraction,adaptive_sequence,max_residual,error
+14,100,0.025,0.0,1,robust-sequential,ok,[4],457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,100,0.025,0.0,1,initial-flow,ok,[1],457.2200000000001,0.9875801887811306,"[5, 2]",8.704148513061227e-12,
+14,100,0.025,0.0,1,none,ok,[],457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,100,0.025,0.0,2,robust-sequential,ok,"[4, 3]",457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,100,0.025,0.0,2,initial-flow,ok,"[1, 3]",457.2200000000001,0.9875801887811306,"[5, 2]",8.704148513061227e-12,
+14,100,0.025,0.0,2,none,ok,[],457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,101,0.025,0.0,1,robust-sequential,ok,[4],457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,101,0.025,0.0,1,initial-flow,ok,[1],457.2200000000001,0.9875801887811306,"[5, 2]",8.704148513061227e-12,
+14,101,0.025,0.0,1,none,ok,[],457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,101,0.025,0.0,2,robust-sequential,ok,"[4, 3]",457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,101,0.025,0.0,2,initial-flow,ok,"[1, 3]",457.2200000000001,0.9875801887811306,"[5, 2]",8.704148513061227e-12,
+14,101,0.025,0.0,2,none,ok,[],457.2200000000001,0.9875801887811306,"[5, 1]",8.704148513061227e-12,
+14,100,0.025,0.15,1,robust-sequential,ok,[4],471.4284812130826,0.9879500014640596,"[8, 1]",3.751665644813329e-12,
+14,100,0.025,0.15,1,initial-flow,ok,[1],471.4284812130826,0.9879500014640596,"[8, 3]",3.751665644813329e-12,
+14,100,0.025,0.15,1,none,ok,[],471.4284812130826,0.9879500014640596,"[8, 1]",3.751665644813329e-12,
+14,100,0.025,0.15,2,robust-sequential,ok,"[4, 3]",471.4284812130826,0.9879500014640596,"[8, 1]",3.751665644813329e-12,
+14,100,0.025,0.15,2,initial-flow,ok,"[1, 3]",471.4284812130826,0.9879500014640596,"[8, 6]",3.751665644813329e-12,
+14,100,0.025,0.15,2,none,ok,[],471.4284812130826,0.9879500014640596,"[8, 1]",3.751665644813329e-12,
+14,101,0.025,0.15,1,robust-sequential,ok,[4],469.44843464028065,0.9878997917904497,"[5, 1]",3.240074875066057e-12,
+14,101,0.025,0.15,1,initial-flow,ok,[1],469.44843464028065,0.9878997917904497,"[5, 2]",3.240074875066057e-12,
+14,101,0.025,0.15,1,none,ok,[],469.44843464028065,0.9878997917904497,"[5, 1]",3.240074875066057e-12,
+14,101,0.025,0.15,2,robust-sequential,ok,"[4, 3]",469.44843464028065,0.9878997917904497,"[5, 1]",3.240074875066057e-12,
+14,101,0.025,0.15,2,initial-flow,ok,"[1, 3]",469.44843464028065,0.9878997917904497,"[5, 2]",3.240074875066057e-12,
+14,101,0.025,0.15,2,none,ok,[],469.44843464028065,0.9878997917904497,"[5, 1]",3.240074875066057e-12,
+14,100,0.1,0.0,1,robust-sequential,ok,[4],439.96999999999997,0.950320755124522,"[3, 1]",7.503331289626658e-12,
+14,100,0.1,0.0,1,initial-flow,ok,[1],439.96999999999997,0.950320755124522,"[3, 4]",7.503331289626658e-12,
+14,100,0.1,0.0,1,none,ok,[],439.96999999999997,0.950320755124522,"[3, 1]",7.503331289626658e-12,
+14,100,0.1,0.0,2,robust-sequential,ok,"[4, 3]",392.8323833977464,0.8485050508623591,"[15, 1]",7.503331289626658e-12,
+14,100,0.1,0.0,2,initial-flow,ok,"[1, 3]",397.3156238415354,0.8581887030294304,"[4, 7]",7.503331289626658e-12,
+14,100,0.1,0.0,2,none,ok,[],439.96999999999997,0.950320755124522,"[3, 1]",7.503331289626658e-12,
+14,101,0.1,0.0,1,robust-sequential,ok,[4],439.96999999999997,0.950320755124522,"[3, 1]",7.503331289626658e-12,
+14,101,0.1,0.0,1,initial-flow,ok,[1],439.96999999999997,0.950320755124522,"[3, 4]",7.503331289626658e-12,
+14,101,0.1,0.0,1,none,ok,[],439.96999999999997,0.950320755124522,"[3, 1]",7.503331289626658e-12,
+14,101,0.1,0.0,2,robust-sequential,ok,"[4, 3]",392.8323833977464,0.8485050508623591,"[15, 1]",7.503331289626658e-12,
+14,101,0.1,0.0,2,initial-flow,ok,"[1, 3]",397.3156238415354,0.8581887030294304,"[4, 7]",7.503331289626658e-12,
+14,101,0.1,0.0,2,none,ok,[],439.96999999999997,0.950320755124522,"[3, 1]",7.503331289626658e-12,
+14,100,0.1,0.15,1,robust-sequential,ok,[4],454.1784812130826,0.9518000058562379,"[3, 1]",5.6274984672199935e-12,
+14,100,0.1,0.15,1,initial-flow,ok,[1],454.1784812130826,0.9518000058562379,"[3, 4]",5.6274984672199935e-12,
+14,100,0.1,0.15,1,none,ok,[],454.1784812130826,0.9518000058562379,"[3, 1]",5.6274984672199935e-12,
+14,100,0.1,0.15,2,robust-sequential,ok,"[4, 3]",397.12805606853,0.8322421729055166,"[8, 1]",5.6274984672199935e-12,
+14,100,0.1,0.15,2,initial-flow,ok,"[1, 3]",454.1784812130825,0.9518000058562376,"[4, 2]",5.6274984672199935e-12,
+14,100,0.1,0.15,2,none,ok,[],454.1784812130826,0.9518000058562379,"[3, 1]",5.6274984672199935e-12,
+14,101,0.1,0.15,1,robust-sequential,ok,[4],452.19843464028054,0.9515991671617972,"[5, 1]",1.8474111129762605e-12,
+14,101,0.1,0.15,1,initial-flow,ok,[1],452.19843464028054,0.9515991671617972,"[5, 2]",1.8474111129762605e-12,
+14,101,0.1,0.15,1,none,ok,[],452.19843464028054,0.9515991671617972,"[5, 1]",1.8474111129762605e-12,
+14,101,0.1,0.15,2,robust-sequential,ok,"[4, 3]",452.19843464028054,0.9515991671617972,"[5, 1]",1.8474111129762605e-12,
+14,101,0.1,0.15,2,initial-flow,ok,"[1, 3]",452.19843464028054,0.9515991671617972,"[5, 2]",1.8474111129762605e-12,
+14,101,0.1,0.15,2,none,ok,[],452.19843464028054,0.9515991671617972,"[5, 1]",1.8474111129762605e-12,
+14,100,0.5,0.0,1,robust-sequential,ok,[4],311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,100,0.5,0.0,1,initial-flow,ok,[1],185.17,0.39996112059096695,"[6, 3]",1.1937117960769683e-11,
+14,100,0.5,0.0,1,none,ok,[],311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,100,0.5,0.0,2,robust-sequential,ok,"[4, 3]",311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,100,0.5,0.0,2,initial-flow,ok,"[1, 3]",147.30999999999983,0.31818476359159303,"[4, 5]",1.1937117960769683e-11,
+14,100,0.5,0.0,2,none,ok,[],311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,101,0.5,0.0,1,robust-sequential,ok,[4],311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,101,0.5,0.0,1,initial-flow,ok,[1],185.17,0.39996112059096695,"[6, 3]",1.1937117960769683e-11,
+14,101,0.5,0.0,1,none,ok,[],311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,101,0.5,0.0,2,robust-sequential,ok,"[4, 3]",311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,101,0.5,0.0,2,initial-flow,ok,"[1, 3]",147.30999999999983,0.31818476359159303,"[4, 5]",1.1937117960769683e-11,
+14,101,0.5,0.0,2,none,ok,[],311.5857871074425,0.6730150703230069,"[10, 1]",1.1937117960769683e-11,
+14,100,0.5,0.15,1,robust-sequential,ok,[4],308.28557600767977,0.6460592590511555,"[15, 1]",1.057287590811029e-11,
+14,100,0.5,0.15,1,initial-flow,ok,[1],190.53367275209308,0.39929225699306187,"[3, 6]",1.057287590811029e-11,
+14,100,0.5,0.15,1,none,ok,[],308.28557600767977,0.6460592590511555,"[15, 1]",1.057287590811029e-11,
+14,100,0.5,0.15,2,robust-sequential,ok,"[4, 3]",308.28557600767977,0.6460592590511555,"[15, 1]",1.057287590811029e-11,
+14,100,0.5,0.15,2,initial-flow,ok,"[1, 3]",157.23138630591774,0.32950225648525544,"[5, 4]",1.057287590811029e-11,
+14,100,0.5,0.15,2,none,ok,[],308.28557600767977,0.6460592590511555,"[15, 1]",1.057287590811029e-11,
+14,101,0.5,0.15,1,robust-sequential,ok,[4],321.4539764839133,0.6764626165640679,"[10, 1]",2.1259438653942198e-11,
+14,101,0.5,0.15,1,initial-flow,ok,[1],183.1503835138239,0.3854187433350166,"[3, 6]",2.1259438653942198e-11,
+14,101,0.5,0.15,1,none,ok,[],321.4539764839133,0.6764626165640679,"[10, 1]",2.1259438653942198e-11,
+14,101,0.5,0.15,2,robust-sequential,ok,"[4, 3]",321.4539764839133,0.6764626165640679,"[10, 1]",2.1259438653942198e-11,
+14,101,0.5,0.15,2,initial-flow,ok,"[1, 3]",153.8621056334767,0.3237849589086893,"[4, 5]",2.1259438653942198e-11,
+14,101,0.5,0.15,2,none,ok,[],321.4539764839133,0.6764626165640679,"[10, 1]",2.1259438653942198e-11,
+39,100,0.025,0.0,1,robust-sequential,ok,[14],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,100,0.025,0.0,1,initial-flow,ok,[14],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,100,0.025,0.0,1,none,ok,[],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,100,0.025,0.0,2,robust-sequential,ok,"[14, 1]",2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,100,0.025,0.0,2,initial-flow,ok,"[14, 46]",2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,100,0.025,0.0,2,none,ok,[],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,101,0.025,0.0,1,robust-sequential,ok,[14],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,101,0.025,0.0,1,initial-flow,ok,[14],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,101,0.025,0.0,1,none,ok,[],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,101,0.025,0.0,2,robust-sequential,ok,"[14, 1]",2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,101,0.025,0.0,2,initial-flow,ok,"[14, 46]",2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,101,0.025,0.0,2,none,ok,[],2903.045,0.2876152969732997,"[2, 16]",9.82709025265649e-10,
+39,100,0.025,0.15,1,robust-sequential,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.025,0.15,1,initial-flow,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.025,0.15,1,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.025,0.15,2,robust-sequential,initial-infeasible,"[14, 1]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.025,0.15,2,initial-flow,initial-infeasible,"[14, 46]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.025,0.15,2,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.025,0.15,1,robust-sequential,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.025,0.15,1,initial-flow,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.025,0.15,1,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.025,0.15,2,robust-sequential,initial-infeasible,"[14, 1]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.025,0.15,2,initial-flow,initial-infeasible,"[14, 46]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.025,0.15,2,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.1,0.0,1,robust-sequential,ok,[14],2066.9200000000014,0.20477733194630227,"[1, 17]",1.6683543435647152e-10,
+39,100,0.1,0.0,1,initial-flow,ok,[14],2066.9200000000014,0.20477733194630227,"[1, 17]",1.6683543435647152e-10,
+39,100,0.1,0.0,1,none,ok,[],2093.92,0.20745232080051523,"[14, 44]",1.6683543435647152e-10,
+39,100,0.1,0.0,2,robust-sequential,ok,"[14, 1]",2066.9199999999987,0.204777331946302,"[17, 2]",1.6683543435647152e-10,
+39,100,0.1,0.0,2,initial-flow,ok,"[14, 46]",2066.9200000000014,0.20477733194630227,"[1, 17]",1.6683543435647152e-10,
+39,100,0.1,0.0,2,none,ok,[],2093.92,0.20745232080051523,"[14, 44]",1.6683543435647152e-10,
+39,101,0.1,0.0,1,robust-sequential,ok,[14],2066.9200000000014,0.20477733194630227,"[1, 17]",1.6683543435647152e-10,
+39,101,0.1,0.0,1,initial-flow,ok,[14],2066.9200000000014,0.20477733194630227,"[1, 17]",1.6683543435647152e-10,
+39,101,0.1,0.0,1,none,ok,[],2093.92,0.20745232080051523,"[14, 44]",1.6683543435647152e-10,
+39,101,0.1,0.0,2,robust-sequential,ok,"[14, 1]",2066.9199999999987,0.204777331946302,"[17, 2]",1.6683543435647152e-10,
+39,101,0.1,0.0,2,initial-flow,ok,"[14, 46]",2066.9200000000014,0.20477733194630227,"[1, 17]",1.6683543435647152e-10,
+39,101,0.1,0.0,2,none,ok,[],2093.92,0.20745232080051523,"[14, 44]",1.6683543435647152e-10,
+39,100,0.1,0.15,1,robust-sequential,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.1,0.15,1,initial-flow,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.1,0.15,1,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.1,0.15,2,robust-sequential,initial-infeasible,"[14, 1]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.1,0.15,2,initial-flow,initial-infeasible,"[14, 46]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.1,0.15,2,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.1,0.15,1,robust-sequential,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.1,0.15,1,initial-flow,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.1,0.15,1,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.1,0.15,2,robust-sequential,initial-infeasible,"[14, 1]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.1,0.15,2,initial-flow,initial-infeasible,"[14, 46]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.1,0.15,2,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.5,0.0,1,robust-sequential,ok,[14],1765.5007242366848,0.1749146207199371,"[37, 46]",1.1897327567567118e-10,
+39,100,0.5,0.0,1,initial-flow,ok,[14],1765.5007242366848,0.1749146207199371,"[37, 46]",1.1897327567567118e-10,
+39,100,0.5,0.0,1,none,ok,[],2097.919999999999,0.20784861544558375,"[14, 46]",1.1897327567567118e-10,
+39,100,0.5,0.0,2,robust-sequential,ok,"[14, 1]",1765.5007242366848,0.1749146207199371,"[37, 46]",1.1897327567567118e-10,
+39,100,0.5,0.0,2,initial-flow,ok,"[14, 46]",1531.2492283825823,0.15170646736836405,"[37, 39]",1.1897327567567118e-10,
+39,100,0.5,0.0,2,none,ok,[],2097.919999999999,0.20784861544558375,"[14, 46]",1.1897327567567118e-10,
+39,101,0.5,0.0,1,robust-sequential,ok,[14],1765.5007242366848,0.1749146207199371,"[37, 46]",1.1897327567567118e-10,
+39,101,0.5,0.0,1,initial-flow,ok,[14],1765.5007242366848,0.1749146207199371,"[37, 46]",1.1897327567567118e-10,
+39,101,0.5,0.0,1,none,ok,[],2097.919999999999,0.20784861544558375,"[14, 46]",1.1897327567567118e-10,
+39,101,0.5,0.0,2,robust-sequential,ok,"[14, 1]",1765.5007242366848,0.1749146207199371,"[37, 46]",1.1897327567567118e-10,
+39,101,0.5,0.0,2,initial-flow,ok,"[14, 46]",1531.2492283825823,0.15170646736836405,"[37, 39]",1.1897327567567118e-10,
+39,101,0.5,0.0,2,none,ok,[],2097.919999999999,0.20784861544558375,"[14, 46]",1.1897327567567118e-10,
+39,100,0.5,0.15,1,robust-sequential,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.5,0.15,1,initial-flow,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.5,0.15,1,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.5,0.15,2,robust-sequential,initial-infeasible,"[14, 1]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.5,0.15,2,initial-flow,initial-infeasible,"[14, 46]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,100,0.5,0.15,2,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.5,0.15,1,robust-sequential,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.5,0.15,1,initial-flow,initial-infeasible,[14],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.5,0.15,1,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.5,0.15,2,robust-sequential,initial-infeasible,"[14, 1]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.5,0.15,2,initial-flow,initial-infeasible,"[14, 46]",,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+39,101,0.5,0.15,2,none,initial-infeasible,[],,,,,The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)

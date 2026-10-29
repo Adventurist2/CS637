@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "priority_configuration_cells": 45,
+  "priority_rows": 23296,
+  "timing_rows": 1728,
+  "protection_rows": 1648,
+  "stress_rows": 144,
+  "oracle_tables": 40,
+  "oracle_optimizer_calls": 41299,
+  "fresh_exact_replays": [
+    {
+      "case": "14",
+      "seed": 100,
+      "protected": [
+        4,
+        3
+      ],
+      "saved_mw": 395.3167809343908,
+      "fresh_mw": 395.31678093439075,
+      "responses": 324
+    },
+    {
+      "case": "39",
+      "seed": 100,
+      "protected": [
+        14,
+        1
+      ],
+      "saved_mw": 2267.5112375329327,
+      "fresh_mw": 2267.5112375329327,
+      "responses": 1936
+    }
+  ],
+  "default_compatibility_probes": 26,
+  "max_default_state_difference_mw": 0.0,
+  "max_residual": 9.99999999806711e-07,
+  "max_priority_floor_mw": 1e-06,
+  "unit_test_count": 16,
+  "unit_test_status": "PASS",
+  "pdf_pages": 20,
+  "presentation_slides": 24,
+  "presentation_editable_charts": 6,
+  "visual_review": "All report pages and slide previews inspected; no unintended clipping or overlap",
+  "pdf_boundary_check": "All text stays inside page margins",
+  "presentation_package_check": "PASS",
+  "presentation_geometry_check": "PASS",
+  "browser_demo_check": "Embedded JavaScript syntax checked; no interactive browser QA claimed"
+}

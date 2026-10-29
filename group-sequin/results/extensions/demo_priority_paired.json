@@ -1,0 +1,156 @@
+[
+  {
+    "label": "Selected largest gain",
+    "case": "39",
+    "seed": 0,
+    "fraction": 0.25,
+    "ramp": 0.5,
+    "sequence": [
+      39,
+      14
+    ],
+    "critical_bus_ids": [
+      3,
+      7,
+      18,
+      21,
+      25,
+      39
+    ],
+    "total-tight": [
+      {
+        "round": 0,
+        "shed_mw": 0.0,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 3693.623745213751,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 0.0,
+        "service_floor_tolerance_mw": 0.0
+      },
+      {
+        "round": 1,
+        "shed_mw": 607.8938345019645,
+        "critical_shed_mw": 517.9452426301916,
+        "critical_demand_mw": 3693.623745213751,
+        "critical_retained_fraction": 0.8597731446519553,
+        "max_residual": 1.0231815394945443e-11,
+        "service_floor_tolerance_mw": 0.0
+      },
+      {
+        "round": 2,
+        "shed_mw": 1710.3656097496978,
+        "critical_shed_mw": 1573.4343518963985,
+        "critical_demand_mw": 3693.623745213751,
+        "critical_retained_fraction": 0.5740133645352273,
+        "max_residual": 9.094947017729282e-13,
+        "service_floor_tolerance_mw": 0.0
+      }
+    ],
+    "critical-first": [
+      {
+        "round": 0,
+        "shed_mw": 0.0,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 3693.623745213751,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 0.0,
+        "service_floor_tolerance_mw": 0.0
+      },
+      {
+        "round": 1,
+        "shed_mw": 672.8552200630603,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 3693.623745213751,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 1.6496137789090426e-11,
+        "service_floor_tolerance_mw": 1e-06
+      },
+      {
+        "round": 2,
+        "shed_mw": 1831.0083351462586,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 3693.623745213751,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 9.094947017729282e-13,
+        "service_floor_tolerance_mw": 1e-06
+      }
+    ]
+  },
+  {
+    "label": "Selected largest harm",
+    "case": "14",
+    "seed": 0,
+    "fraction": 0.5,
+    "ramp": 0.1,
+    "sequence": [
+      4,
+      2
+    ],
+    "critical_bus_ids": [
+      2,
+      3,
+      6,
+      9,
+      10,
+      13
+    ],
+    "total-tight": [
+      {
+        "round": 0,
+        "shed_mw": 0.0,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 352.81813069629635,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 0.0,
+        "service_floor_tolerance_mw": 0.0
+      },
+      {
+        "round": 1,
+        "shed_mw": 62.646361309998234,
+        "critical_shed_mw": 36.38636265775156,
+        "critical_demand_mw": 352.81813069629635,
+        "critical_retained_fraction": 0.8968693513965904,
+        "max_residual": 5.115907697472721e-13,
+        "service_floor_tolerance_mw": 0.0
+      },
+      {
+        "round": 2,
+        "shed_mw": 116.2504503110915,
+        "critical_shed_mw": 89.99045165884482,
+        "critical_demand_mw": 352.81813069629635,
+        "critical_retained_fraction": 0.7449381314921482,
+        "max_residual": 3.836930773104541e-13,
+        "service_floor_tolerance_mw": 0.0
+      }
+    ],
+    "critical-first": [
+      {
+        "round": 0,
+        "shed_mw": 0.0,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 352.81813069629635,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 0.0,
+        "service_floor_tolerance_mw": 0.0
+      },
+      {
+        "round": 1,
+        "shed_mw": 77.52215222940215,
+        "critical_shed_mw": 0.0,
+        "critical_demand_mw": 352.81813069629635,
+        "critical_retained_fraction": 1.0,
+        "max_residual": 4.405364961712621e-13,
+        "service_floor_tolerance_mw": 1e-06
+      },
+      {
+        "round": 2,
+        "shed_mw": 438.93701148693737,
+        "critical_shed_mw": 329.81813069629675,
+        "critical_demand_mw": 352.81813069629635,
+        "critical_retained_fraction": 0.06518939362500575,
+        "max_residual": 2.842170943040401e-14,
+        "service_floor_tolerance_mw": 1e-06
+      }
+    ]
+  }
+]

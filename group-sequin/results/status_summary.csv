@@ -1,0 +1,9 @@
+experiment,CLOSE,DIVERGED,MATCH
+author_sequence_replay,29,65,32
+exploratory_criticality_baseline,0,4,0
+k_sweep_search,10,28,3
+load_perturbation_sensitivity,3,0,0
+model_ablation,0,5,5
+permutation_reproduction,3,3,6
+ramp_sequence_replay,12,30,48
+selected_search_reproduction,8,8,9

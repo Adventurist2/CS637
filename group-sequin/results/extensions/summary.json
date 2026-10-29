@@ -1,0 +1,109 @@
+{
+  "source_sha256": "67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80",
+  "upstream_commit": "e03e8495fb67af50f00c52daa75908e34960f151",
+  "rows": {
+    "protection": 1648,
+    "timing": 1728,
+    "priority": 23296,
+    "stress": 144,
+    "stress_ok": 108,
+    "stress_initial_infeasible": 36
+  },
+  "stress_comparisons": 36,
+  "stress_robust_worse_than_flow": 10,
+  "stress_worst_excess_pp": 35.48303067314139,
+  "priority_paired_counts": [
+    {
+      "policy": "critical-first",
+      "paired_rows": 5824,
+      "critical_improves": 2916,
+      "critical_worsens": 75,
+      "extra_total_shed": 1835,
+      "maximum_critical_gain_mw": 1573.4343518963983,
+      "maximum_critical_harm_mw": 239.82767903745193
+    },
+    {
+      "policy": "weight-10",
+      "paired_rows": 5824,
+      "critical_improves": 2929,
+      "critical_worsens": 56,
+      "extra_total_shed": 1789,
+      "maximum_critical_gain_mw": 1573.4343518963983,
+      "maximum_critical_harm_mw": 239.82767903745142
+    },
+    {
+      "policy": "weight-2",
+      "paired_rows": 5824,
+      "critical_improves": 2417,
+      "critical_worsens": 43,
+      "extra_total_shed": 1205,
+      "maximum_critical_gain_mw": 1573.4343518963983,
+      "maximum_critical_harm_mw": 239.82767903745147
+    }
+  ],
+  "max_residual": 9.99999999806711e-07,
+  "max_service_floor_tolerance_mw": 1e-06,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.17.1",
+    "pandas": "2.2.3"
+  },
+  "statistical_unit": "demand scenario, not deterministic sequence rows",
+  "protection_intervals": [
+    {
+      "case": "14",
+      "budget": 1,
+      "reduction_pp": 2.677974568874945e-14,
+      "bootstrap95_pp": [
+        2.4341671367569747e-15,
+        6.323729214356091e-14
+      ]
+    },
+    {
+      "case": "14",
+      "budget": 2,
+      "reduction_pp": 10.173487132473648,
+      "bootstrap95_pp": [
+        9.541145312056523,
+        10.619393942726969
+      ]
+    },
+    {
+      "case": "14",
+      "budget": 3,
+      "reduction_pp": 10.173487132473648,
+      "bootstrap95_pp": [
+        9.541145312056523,
+        10.619393942726969
+      ]
+    },
+    {
+      "case": "39",
+      "budget": 1,
+      "reduction_pp": 0.7619860364434788,
+      "bootstrap95_pp": [
+        0.01799628131642314,
+        2.0924466843462524
+      ]
+    },
+    {
+      "case": "39",
+      "budget": 2,
+      "reduction_pp": 1.0448130451817046,
+      "bootstrap95_pp": [
+        0.33239733588058973,
+        2.2353204819948185
+      ]
+    },
+    {
+      "case": "39",
+      "budget": 3,
+      "reduction_pp": 3.827805530154001,
+      "bootstrap95_pp": [
+        3.484453599408976,
+        4.216054545908618
+      ]
+    }
+  ]
+}

@@ -1,5 +1,16 @@
 # SEQUIN: sequential grid failures and resilience extensions
 
+## Final project on the group reproduction
+
+The final extensions built on the group's Python reproduction are in [group-sequin](group-sequin/EXTENSIONS_README.md). This folder contains the final code, fresh experiments, tests, plots, demonstrations and presentation sources. Its [implementation comparison](group-sequin/IMPLEMENTATION_COMPARISON.md) explains the differences from the earlier implementation documented below.
+
+- [Final combined presentation](group-sequin/output/presentation/SEQUIN_Original_Slides_With_Part2.pptx): all 15 supplied slides preserved, with 16 second-part slides inserted before the original closing slide (31 total).
+- [Full project report](group-sequin/output/pdf/SEQUIN_Group_Extensions_Full_Report.pdf): paper, implementation, extension methods, results, limitations and future work.
+- [Complete final project ZIP](SEQUIN_Group_Extensions_Completed.zip): code and all deliverables.
+- [Speaking guide](group-sequin/PRESENTATION_GUIDE.md) and [saved demonstration](group-sequin/output/demonstration.html). The saved demonstration can be opened locally after downloading.
+
+The group-model evaluation records 16 passing extension tests, 26 exact upstream state-compatibility probes, and fresh exhaustive post-protection replays. The unchanged original benchmark checker fails on the missing case-162 k=8 result; this limitation and adverse extension outcomes are retained in the report.
+
 An independent Python implementation of SEQUIN-style sequential grid contingency analysis, plus **three evaluated extensions**: scenario-aware protection, variable response timing, and critical-load prioritization. The main implementation uses the open-source **HiGHS** optimizer and public PGLib benchmark networks; it does not require Gurobi.
 
 **The basic question:** if transmission lines fail one after another, how does the grid respond, how much demand becomes unserved, and which interventions help?

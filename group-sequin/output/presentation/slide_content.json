@@ -1,0 +1,690 @@
+[
+  {
+    "title": "The paper: why failure order matters",
+    "body": [
+      "One line fails. The operator adjusts generation and may shed demand.",
+      "The next failure acts on that changed state.",
+      "SEQUIN searches for damaging orders using network clues and constrained responses."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "Use the road-network analogy, then explain that power flows obey physical equations and cannot be arbitrarily routed. The defender is myopic. Cite Chio et al., ICCPS 2025, Sections 3-4, DOI 10.1145/3716550.3722029.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "The defender and its carried state",
+    "body": null,
+    "table": [
+      [
+        "Quantity",
+        "Model rule"
+      ],
+      [
+        "Line flow",
+        "DC relation, rating and angle-difference limits"
+      ],
+      [
+        "Generation",
+        "Capacity and previous output +/- alpha Pmax, or shutdown"
+      ],
+      [
+        "Served demand",
+        "Cannot exceed service retained in the previous round"
+      ],
+      [
+        "Network",
+        "Failed lines remain out; each island has a reference angle"
+      ]
+    ],
+    "charts": null,
+    "notes": "Power is in MW in this code. The original loss output divides by baseMVA. A generator can switch off completely. The group code permits later restart because it does not carry z. The paper describes no restart in Eq. 2f. No AC voltage, frequency, relay or transient simulation.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Group implementation: code reading order",
+    "body": null,
+    "table": [
+      [
+        "File",
+        "Role"
+      ],
+      [
+        "grid_model.py",
+        "Parse cases, initial LP, response MILP"
+      ],
+      [
+        "search_methods.py",
+        "Exact, greedy and top-flow guided attacks"
+      ],
+      [
+        "network_metrics.py",
+        "Flow margins and structural heuristics"
+      ],
+      [
+        "extensions.py",
+        "Protection, timing, priority and prefix cache"
+      ],
+      [
+        "run_extensions.py",
+        "Fresh studies, summaries and trace examples"
+      ],
+      [
+        "audit_extensions.py",
+        "Independent replays and precision controls"
+      ]
+    ],
+    "charts": null,
+    "notes": "The first three files already existed upstream. New responses still use this repository's grid_model.defend. The earlier neighboring sequin package is only imported by the optional comparison phase.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Why the two implementations differ",
+    "body": null,
+    "table": [
+      [
+        "Aspect",
+        "Group model",
+        "Earlier project"
+      ],
+      [
+        "Power units",
+        "MW",
+        "Per-unit internally"
+      ],
+      [
+        "Generator shutdown",
+        "Restart permitted next round",
+        "Persistent shutdown"
+      ],
+      [
+        "Response ties",
+        "Single objective",
+        "Economic tie-break"
+      ],
+      [
+        "Solver precision",
+        "Default MIP gap",
+        "Explicit 1e-8"
+      ],
+      [
+        "Attack guidance",
+        "Top-flow shortlist",
+        "Multiple network properties"
+      ]
+    ],
+    "charts": null,
+    "notes": "There are additional angle-box, negative-injection and RNG differences in the report. No single factor is established as the cause of every mismatch. The six supplied cases have zero quadratic costs and active shunts, so those generic feature differences do not explain these measurements.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "The same attack can produce different loss",
+    "body": null,
+    "table": null,
+    "charts": [
+      {
+        "type": "bar",
+        "categories": [
+          "Case 14 (3,1)",
+          "Case 118 (104,97)"
+        ],
+        "series": [
+          {
+            "name": "Group",
+            "values": [
+              439.97,
+              531.398
+            ],
+            "color": "#087F8C"
+          },
+          {
+            "name": "Earlier project",
+            "values": [
+              462.97,
+              1192.347
+            ],
+            "color": "#CF5C36"
+          }
+        ],
+        "y": "Final shed MW"
+      }
+    ],
+    "notes": "This is a model-comparison example, not a quality ranking. Different dispatch choices, shutdown/restart semantics and numerical settings can alter later ramp states. Default-compatibility replay of the new defender against untouched upstream source gives exactly matching generation and service on all 26 probes.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "Selected fixed attacks on unperturbed identical inputs"
+  },
+  {
+    "title": "Original reproduction rerun",
+    "body": [
+      "The original driver completed 311 measured rows and seven plots.",
+      "Its unchanged checker fails because case 162, k=8 is missing.",
+      "Fresh replay confirms the eighth response MILP is infeasible.",
+      "Selected reference matches coexist with larger discrepancies."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "The failed prefix is [83,5,19,228,196,177,212,219]. The original driver skipped the unsuccessful response. Case-14 guided results match selected reference budgets. Case-39 guided k=6 differs by about -2.075%, slightly beyond its 2% checker threshold. Full benchmark rows and the recorded solver status remain in results/. This does not establish exact reproduction of every paper result.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Critique and the three extensions",
+    "body": null,
+    "table": [
+      [
+        "Gap",
+        "Extension",
+        "Practical question"
+      ],
+      [
+        "No investment selection",
+        "Scenario-aware protection",
+        "Which limited set of lines should we protect?"
+      ],
+      [
+        "Fixed response epochs",
+        "Variable response windows",
+        "What changes when failures arrive closer together?"
+      ],
+      [
+        "All MW valued equally",
+        "Critical-service objectives",
+        "Which services should retain power first?"
+      ]
+    ],
+    "charts": null,
+    "notes": "The paper explicitly proposes ruggedization and variable epochs as future work in Section 6. Priority service is a realistic course-project extension with synthetic labels. Do not claim these general research ideas are invented here.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Evaluation design",
+    "body": null,
+    "table": [
+      [
+        "Study",
+        "Cases",
+        "Comparison scope"
+      ],
+      [
+        "Protection",
+        "14, 39",
+        "All ordered pairs, train/test split, q=0-3"
+      ],
+      [
+        "Timing",
+        "14, 39, 118",
+        "Common triple-order cohort, three horizons"
+      ],
+      [
+        "Priority",
+        "14, 39, 118",
+        "All pairs on 14, shared targeted cohort on 39/118"
+      ]
+    ],
+    "charts": null,
+    "notes": "Protection has 1648 rows, timing 1728, and priority 23296. Row counts include deterministic repeats and policy comparisons. Protection design seeds 0/1/2 and held-out seeds 100-104 are separate. Other studies use demand seeds 0/1/2.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "Demand scenarios are the experimental unit"
+  },
+  {
+    "title": "Extension 1: adaptive line protection",
+    "body": [
+      "Build complete k=2 ordered-outage tables for each design demand.",
+      "Add the protected line that minimizes worst design-scenario loss.",
+      "After choosing q lines, let the attack adapt over every eligible pair.",
+      "Compare random, flow, betweenness, single-scenario and simultaneous designs."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "Protection changes outage eligibility only. It leaves physical response on an eligible sequence unchanged, so filtering complete tables is valid. Exact outer protection enumeration for q<=2 is a separate small-instance oracle. Greedy has no general global guarantee.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Protection on case 14",
+    "body": null,
+    "table": null,
+    "charts": [
+      {
+        "categories": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "series": [
+          {
+            "name": "Scenario design",
+            "values": [
+              95.04360542069989,
+              95.04360542069983,
+              84.87011828822624,
+              84.87011828822624
+            ],
+            "color": "#087F8C"
+          },
+          {
+            "name": "Initial flow",
+            "values": [
+              95.04360542069989,
+              95.04360542069989,
+              93.32091714376942,
+              93.32091714376942
+            ],
+            "color": "#CF5C36"
+          },
+          {
+            "name": "Single scenario",
+            "values": [
+              95.04360542069989,
+              93.32091714376942,
+              84.87011828822624,
+              84.87011828822624
+            ],
+            "color": "#6554A4"
+          },
+          {
+            "name": "Simultaneous design",
+            "values": [
+              95.04360542069989,
+              95.04360542069989,
+              95.04360542069989,
+              95.04360542069989
+            ],
+            "color": "#8A8D91"
+          }
+        ],
+        "x": "Protected lines q",
+        "y": "Mean test worst shed (%)"
+      }
+    ],
+    "notes": "Lower loss is better. Each point averages held-out scenario worst losses, not a fixed common attack. At q=2 the scenario design helps substantially. At q=1 it fails to improve held-out worst loss, while the single-scenario plan does improve it. This is an important generalization caveat.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Protection on case 39",
+    "body": null,
+    "table": null,
+    "charts": [
+      {
+        "categories": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "series": [
+          {
+            "name": "Scenario design",
+            "values": [
+              21.51687272664234,
+              20.75488669019886,
+              20.47205968146063,
+              17.689067196488338
+            ],
+            "color": "#087F8C"
+          },
+          {
+            "name": "Initial flow",
+            "values": [
+              21.51687272664234,
+              20.75488669019886,
+              20.347379265383818,
+              20.347379265383818
+            ],
+            "color": "#CF5C36"
+          },
+          {
+            "name": "Single scenario",
+            "values": [
+              21.51687272664234,
+              20.75488669019886,
+              20.47205968146063,
+              17.689067196488338
+            ],
+            "color": "#6554A4"
+          },
+          {
+            "name": "Simultaneous design",
+            "values": [
+              21.51687272664234,
+              20.75488669019886,
+              20.75488669019886,
+              20.75488669019886
+            ],
+            "color": "#8A8D91"
+          }
+        ],
+        "x": "Protected lines q",
+        "y": "Mean test worst shed (%)"
+      }
+    ],
+    "notes": "Initial-flow protection slightly outperforms the robust design on held-out seeds at q=2. The scenario design improves more at q=3. Training-objective optimality does not establish the best unseen-scenario performance. Include both outcomes in the presentation.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Protection under shifted conditions",
+    "body": [
+      "Nominal robust design loses to flow in 10 of 36 feasible stress cells.",
+      "Worst excess loss: 35.48 percentage points.",
+      "36 policy rows have an infeasible intact starting scenario.",
+      "Next step: train protection across demand and ramp uncertainty."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "A cell is a case, demand seed, ramp, demand spread and budget combination. Unperturbed seeds duplicate the same demand. Infeasible starting cases have no fabricated attack loss. The line plan remains frozen during stress evaluation.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Extension 2: matched response windows",
+    "body": null,
+    "table": [
+      [
+        "Pattern",
+        "Minutes at H=15",
+        "Sequential failures"
+      ],
+      [
+        "Even",
+        "5, 5, 5",
+        "One new failure per window"
+      ],
+      [
+        "Early cluster",
+        "1, 1, 13",
+        "Short early responses"
+      ],
+      [
+        "Late cluster",
+        "13, 1, 1",
+        "Short final responses"
+      ]
+    ],
+    "charts": null,
+    "notes": "The simultaneous policy loses the whole set in the first window, then can respond twice more. Each window uses alpha Pmax times duration/5. Horizons are 7.5/15/30 minutes. Rates are derived assumptions, not equipment measurements.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "Both comparators receive three redispatch decisions"
+  },
+  {
+    "title": "Timing: final MW and time weighting differ",
+    "body": null,
+    "table": null,
+    "charts": [
+      {
+        "type": "bar",
+        "categories": [
+          "Even",
+          "Early",
+          "Late"
+        ],
+        "series": [
+          {
+            "name": "Sequential",
+            "values": [
+              26.283215333444797,
+              30.28954385170579,
+              35.397648773104876
+            ],
+            "color": "#087F8C"
+          },
+          {
+            "name": "Simultaneous",
+            "values": [
+              26.199492372338266,
+              30.35170587333656,
+              17.164142404585288
+            ],
+            "color": "#CF5C36"
+          }
+        ],
+        "y": "Final shed (%)"
+      },
+      {
+        "type": "bar",
+        "categories": [
+          "Even",
+          "Early",
+          "Late"
+        ],
+        "series": [
+          {
+            "name": "Sequential",
+            "values": [
+              16.03117277818221,
+              28.95615031939632,
+              7.13741094811741
+            ],
+            "color": "#087F8C"
+          },
+          {
+            "name": "Simultaneous",
+            "values": [
+              26.198768187994343,
+              30.35170587333656,
+              17.16414240458528
+            ],
+            "color": "#CF5C36"
+          }
+        ],
+        "y": "Snapshot energy proxy (%)"
+      }
+    ],
+    "notes": "The final-loss maximum and proxy-energy maximum may use different sequences. The snapshot proxy sums endpoint loss times duration, normalized by initial demand times horizon. It is not physical integration of continuous ramping. A worse final loss can still have a smaller proxy when it appears late.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "Case 118, 15 minutes; mean per-seed cohort maxima"
+  },
+  {
+    "title": "The energy measure and its limit",
+    "body": [
+      "Snapshot proxy = sum(endpoint shed MW x window minutes / 60).",
+      "The solver uses each window\u2019s ramp allowance, then holds the endpoint loss for accounting.",
+      "Continuous generation and service paths inside each window remain unmodeled."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "Say response-then-hold snapshot proxy every time you interpret MWh. Do not call it a validated blackout-energy forecast. Restore-load dynamics, continuous ramps and transient feasibility are future work.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Extension 3: critical-service response",
+    "body": null,
+    "table": [
+      [
+        "Policy",
+        "What the operator maximizes"
+      ],
+      [
+        "Total-tight",
+        "Total MW, using matched 1e-8 MIP precision"
+      ],
+      [
+        "Weight 2",
+        "Critical MW counts twice other MW"
+      ],
+      [
+        "Weight 10",
+        "Critical MW counts ten times"
+      ],
+      [
+        "Critical-first",
+        "Critical MW first, then total MW within a recorded floor tolerance"
+      ]
+    ],
+    "charts": null,
+    "notes": "Group seed 17 selects positive-demand buses. Fractions are bus counts, not MW fractions, and assignments need not be nested. One group assignment per size is a limitation. The original total-service policy is retained as an extra comparison.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "Synthetic bus groups; identical initial dispatch and attack cohort"
+  },
+  {
+    "title": "Critical service at the nominal setting",
+    "body": null,
+    "table": null,
+    "charts": [
+      {
+        "type": "bar",
+        "categories": [
+          "Case 14",
+          "Case 39",
+          "Case 118"
+        ],
+        "series": [
+          {
+            "name": "Total-tight",
+            "values": [
+              0.0,
+              66.7574870820808,
+              76.76452717269515
+            ],
+            "color": "#8A8D91"
+          },
+          {
+            "name": "Weight 2",
+            "values": [
+              10.707308579910201,
+              100.0,
+              100.0
+            ],
+            "color": "#087F8C"
+          },
+          {
+            "name": "Weight 10",
+            "values": [
+              10.70730857991018,
+              100.0,
+              100.0
+            ],
+            "color": "#6554A4"
+          },
+          {
+            "name": "Critical-first",
+            "values": [
+              10.70730811437499,
+              100.0,
+              100.0
+            ],
+            "color": "#CF5C36"
+          }
+        ],
+        "y": "Mean worst critical retained (%)"
+      }
+    ],
+    "notes": "Higher retention is better. Each policy is evaluated on exactly the same sequence set within a scenario. Case 14 is exhaustive. Cases 39/118 are sampled worst-found results, including critical-loss-targeted attacks. Rounded 100% retention is not a guarantee against unsearched attacks.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "25% of positive-demand buses; ramp 0.1"
+  },
+  {
+    "title": "Critical gains have costs and adverse cases",
+    "body": [
+      "Comparisons use the total-tight baseline.",
+      "These examples are deliberately selected extremes."
+    ],
+    "table": [
+      [
+        "Selected case",
+        "Critical gain MW",
+        "Extra total loss MW"
+      ],
+      [
+        "Largest gain: case 39",
+        "1,573.43",
+        "120.64"
+      ],
+      [
+        "Largest harm: case 14",
+        "-239.83",
+        "322.69"
+      ]
+    ],
+    "charts": null,
+    "notes": "Give the full scenario and attack from priority_examples.json if asked. A negative gain means critical-first harmed later critical service. Myopic optimization maximizes service now, not across all future outages. Extra total loss can reflect a deliberate sacrifice of ordinary load.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Priority outcomes across paired sequences",
+    "body": null,
+    "table": [
+      [
+        "Policy",
+        "Improves critical",
+        "Worsens critical",
+        "Extra total loss"
+      ],
+      [
+        "critical-first",
+        "2916",
+        "75",
+        "1835"
+      ],
+      [
+        "weight-10",
+        "2929",
+        "56",
+        "1789"
+      ],
+      [
+        "weight-2",
+        "2417",
+        "43",
+        "1205"
+      ]
+    ],
+    "charts": null,
+    "notes": "Do not interpret these counts as independent event probabilities. They include repeated configurations and demand scenarios. The matched-precision total-service control separates the policy objective from the default solver gap.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": "Counts at 0.001 MW threshold; repeated deterministic pairs"
+  },
+  {
+    "title": "Correctness and claim boundaries",
+    "body": [
+      "16 regression tests pass; 26 upstream state probes match exactly.",
+      "Fresh exhaustive post-protection replays match saved table maxima.",
+      "All policies share the same paired attacks in each configuration.",
+      "Small cases are exhaustive. Larger critical/timing studies report worst found."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "The exported residual maximum is 1e-06 native row units. Residual checks validate the implemented mathematical constraints, not real-grid adequacy. Exact tables do not handle all dispatch ties or remove numerical MIP tolerances.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "What the results establish",
+    "body": null,
+    "table": [
+      [
+        "Extension",
+        "Conclusion"
+      ],
+      [
+        "Protection",
+        "Useful gains, with held-out and stress failures against baselines"
+      ],
+      [
+        "Timing",
+        "Spacing changes final loss and the snapshot proxy"
+      ],
+      [
+        "Critical service",
+        "Better selected service can increase other loss; adverse later cases remain"
+      ]
+    ],
+    "charts": null,
+    "notes": "Report improvement, inconclusion and failure honestly. None of these studies establishes broad real-world safety. The work completes the bounded second-part course-project scope.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Future work motivated by the failures",
+    "body": [
+      "Train protection jointly across demand and response-speed uncertainty.",
+      "Strengthen critical-loss attack search and vary priority-group assignments.",
+      "Standardize shutdown, dispatch ties and numerical precision.",
+      "Model continuous ramps, restoration and storage, then test AC feasibility."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "Prioritize joint robust protection because stress failures were measured, and targeted critical search because the larger cohorts are small. Operator lookahead can test whether myopic choices explain adverse priority cases.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  },
+  {
+    "title": "Demonstration and review route",
+    "body": [
+      "Open output/demonstration.html for saved protection, timing and priority traces.",
+      "Read grid_model.py, then extensions.py and run_extensions.py.",
+      "Use audit_extensions.py to check paired cohorts and fresh exact replays.",
+      "Full derivations, results and limitations are in the separate PDF report."
+    ],
+    "table": null,
+    "charts": null,
+    "notes": "If presenting live, run the saved demo first. Optimization is offline, so the browser only selects precomputed traces. Commands and artifact locations are in EXTENSIONS_README.md and PRESENTATION_GUIDE.md.\nSource: group-sequin/results/extensions/; 67cc294651c518a56c9ffbee8975e3c1aa1582e72a8af3478aa7bbf75be86d80. Group upstream e03e8495fb67af50f00c52daa75908e34960f151.",
+    "footer": ""
+  }
+]

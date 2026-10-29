@@ -1,0 +1,7 @@
+# Preserve exact Python bytes used by saved experiment fingerprints.
+*.py -text
+*.mjs text eol=lf
+*.pdf binary
+*.pptx binary
+*.png binary
+*.npz binary
