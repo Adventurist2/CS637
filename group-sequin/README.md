@@ -1,5 +1,14 @@
 # SEQUIN Python Implementation
 
+## Final presentation and speaking script
+
+- [Final PowerPoint](output/presentation/SEQUIN_Final_Presentation.pptx): 31 slides, matching the uploaded template, with nine editable charts and original slides retained.
+- [Matching presentation PDF](output/pdf/SEQUIN_Final_Presentation.pdf): the same 31 slides, exported from PowerPoint.
+- [Three-speaker script](output/documents/SEQUIN_15_Minute_Three_Speaker_Script.docx): Chandan slides 15–19, Saksham slides 20–24, Tejas slides 25–30. Approximately five minutes each.
+- [Separate full report](output/pdf/SEQUIN_Group_Extensions_Full_Report.pdf): the detailed scientific report.
+
+`build_elegant_part2.mjs` defines the 16 added slides using the measured results. `append_template_deck.py` calls `assemble_final_presentation.ps1` to combine an exported section with the original template through Microsoft PowerPoint on Windows. It replaces the previous ZIP-only assembly method. Supply the source template and exported section with `--source` and `--section`. Chart workbook values use 14 significant digits for Excel compatibility; raw experiment CSV files retain their recorded precision.
+
 ## Evaluated extensions and project report
 
 The local `extensions-study` branch adds scenario-aware line protection, matched-horizon response timing, and critical-service objectives on this repository's own SciPy defender. See [the extension guide](EXTENSIONS_README.md) for the complete file map, commands and result locations, [the implementation comparison](IMPLEMENTATION_COMPARISON.md) for differences from the neighboring implementation, and [the presentation guide](PRESENTATION_GUIDE.md) for explanations and speaking notes. Fresh raw results are in `results/extensions/`, with the standalone report in `output/pdf/` and presentation in `output/presentation/`.

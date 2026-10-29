@@ -1,5 +1,13 @@
 # Presentation speaking guide
 
+## Current combined presentation
+
+Use `output/presentation/SEQUIN_Final_Presentation.pptx` and the matching `output/pdf/SEQUIN_Final_Presentation.pdf`. They contain 31 slides: original slides 1–14, redesigned extension slides 15–30, then the original closing slide. The earlier filename `SEQUIN_Original_Slides_With_Part2.pptx` is a compatibility copy of this corrected deck.
+
+The fifteen-minute script is in `output/documents/SEQUIN_15_Minute_Three_Speaker_Script.docx`. Chandan presents 15–19, Saksham 20–24, and Tejas 25–30. The topics and numbers remain aligned with that script.
+
+## Earlier standalone deck notes
+
 The presentation has one cover plus 23 content slides. All measurements use the group model. The PDF is a separate full report.
 
 ## Slide 2: The paper: why failure order matters

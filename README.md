@@ -4,7 +4,9 @@
 
 The final extensions built on the group's Python reproduction are in [group-sequin](group-sequin/EXTENSIONS_README.md). This folder contains the final code, fresh experiments, tests, plots, demonstrations and presentation sources. Its [implementation comparison](group-sequin/IMPLEMENTATION_COMPARISON.md) explains the differences from the earlier implementation documented below.
 
-- [Final combined presentation](group-sequin/output/presentation/SEQUIN_Original_Slides_With_Part2.pptx): all 15 supplied slides preserved, with 16 second-part slides inserted before the original closing slide (31 total).
+- [Final combined presentation](group-sequin/output/presentation/SEQUIN_Final_Presentation.pptx): 31 slides, matching the supplied template, with redesigned extension slides and nine editable charts. Verified to open in Microsoft PowerPoint.
+- [Matching presentation PDF](group-sequin/output/pdf/SEQUIN_Final_Presentation.pdf): the same 31 slides exported from PowerPoint.
+- [Three-speaker script](group-sequin/output/documents/SEQUIN_15_Minute_Three_Speaker_Script.docx): Chandan slides 15–19, Saksham slides 20–24 and Tejas slides 25–30, approximately five minutes each.
 - [Full project report](group-sequin/output/pdf/SEQUIN_Group_Extensions_Full_Report.pdf): paper, implementation, extension methods, results, limitations and future work.
 - [Complete final project ZIP](SEQUIN_Group_Extensions_Completed.zip): code and all deliverables.
 - [Speaking guide](group-sequin/PRESENTATION_GUIDE.md) and [saved demonstration](group-sequin/output/demonstration.html). The saved demonstration can be opened locally after downloading.
