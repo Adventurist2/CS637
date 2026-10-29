@@ -1,0 +1,186 @@
+{
+  "presentation": "SEQUIN_Final_Presentation.pptx",
+  "parts": [
+    {
+      "title": "Chandan Critique and Line Protection",
+      "meta": "Chandan  |  Slides 15 to 19  |  First five minutes",
+      "slides": [
+        {
+          "number": 15,
+          "heading": "Limitations and Three Extensions",
+          "cue": "Point to the three columns from left to right.",
+          "paragraphs": [
+            "Now that we have explained SEQUIN and its implementation, we move to our extension work. SEQUIN identifies damaging sequences of transmission-line failures. We wanted to use that analysis to study choices that could improve grid resilience.",
+            "The slide shows three gaps. First, finding a dangerous attack does not directly tell us which lines to protect with a limited budget. Second, failures can arrive at different speeds, leaving different amounts of time for the operator to respond. Third, maximizing total electricity supplied treats every megawatt equally, even when some services deserve higher priority.",
+            "These gaps motivated line protection, variable response windows and critical-service priorities. We implemented and evaluated all three on the group model."
+          ]
+        },
+        {
+          "number": 16,
+          "heading": "Scenario Aware Line Protection",
+          "cue": "Follow the three steps on the left, then point to the protection budget.",
+          "paragraphs": [
+            "Our first extension asks which few lines we should protect. The important point is that the attacker can change its plan after protection. Protecting one line from the original worst attack may make another attack the most damaging.",
+            "We therefore build complete tables of ordered two-line failures for our selected small networks. We choose protection one line at a time. At each step, we add the line that gives the smallest worst loss across our design demand scenarios. We then search again over every eligible attack.",
+            "The budget runs from zero to three protected lines. Protection makes a line ineligible for the modeled failure. We assume equal costs and perfect hardening against that failure mechanism. The greedy selection rule has no general guarantee of finding the globally best plan."
+          ]
+        },
+        {
+          "number": 17,
+          "heading": "Protection Evaluation Protocol",
+          "cue": "Point to 380 and 2070, then explain the design and test split.",
+          "paragraphs": [
+            "We used cases 14 and 39. They have 380 and 2,070 possible ordered pairs of line failures. Different failure orders can create different physical responses.",
+            "Design seeds zero, one and two select the protection plan. Separate test seeds 100 to 104 evaluate it under unseen demand, with demand variation of plus or minus five percent.",
+            "The comparisons include random protection, high-flow lines, betweenness, a single design scenario and simultaneous-failure design. For budgets up to two lines, we also enumerate protection choices exactly.",
+            "Finally, fresh exhaustive attack searches check the saved results. These checks distinguish the quality of the protection plan from the quality of the attack search. Test results never select the plan."
+          ]
+        },
+        {
+          "number": 18,
+          "heading": "Protection on Unseen Demands",
+          "cue": "Use the left graph for case 14 and the right graph for case 39. Lower loss is better.",
+          "paragraphs": [
+            "The horizontal axis is the number of protected lines. The vertical axis is the mean worst loss on held-out demand scenarios. For each scenario, we allow the attacker to choose its worst eligible sequence.",
+            "On the left, case 14 improves from about 95 percent loss without protection to 84.87 percent with two lines protected by our scenario design. Flow protection leaves 93.32 percent loss at the same budget. This is a useful improvement on this case.",
+            "On the right, the outcome is mixed. At two protected lines, our design leaves 20.47 percent loss, while flow protection leaves 20.35 percent. Flow is slightly better there. Our design improves further at three lines.",
+            "The method can find useful plans, but these results do not show that it always selects the best protection for unseen conditions."
+          ]
+        },
+        {
+          "number": 19,
+          "heading": "Protection Under Shifted Conditions",
+          "cue": "Point to the positive bars, then the 10 of 36 and 35 point 48 highlights.",
+          "paragraphs": [
+            "Next, we kept the plans fixed and changed demand conditions and generator response limits. On this graph, positive bars mean our scenario design performs worse than flow protection. Negative bars mean it performs better.",
+            "It loses to flow in ten of 36 feasible comparisons. The largest excess loss is 35.48 percentage points. Some other scenarios were already infeasible before any attack, so their policy rows are recorded separately.",
+            "Protection therefore depends on the conditions used during design. A useful next step is to design plans across both demand and response-speed uncertainty. Saksham will now explain the timing and critical-service extensions."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Saksham Timing and Critical Services",
+      "meta": "Saksham  |  Slides 20 to 24  |  Next five minutes",
+      "slides": [
+        {
+          "number": 20,
+          "heading": "Variable Response Windows",
+          "cue": "Point to the three coloured windows in each horizontal bar.",
+          "paragraphs": [
+            "Our second extension studies the time available between failures. Generators cannot change output instantly. A longer window allows more adjustment, while a shorter window allows less.",
+            "Each bar represents the same total horizon of fifteen minutes. The even pattern uses five, five and five minutes. The early cluster uses one, one and thirteen. The late cluster uses thirteen, one and one.",
+            "Both sequential and simultaneous comparisons receive three redispatch decisions. In the sequential case, one new failure occurs in each window. In the simultaneous case, all selected lines fail in the first window, followed by two more responses. This makes the comparison fairer. We also test horizons of seven and a half minutes and thirty minutes."
+          ]
+        },
+        {
+          "number": 21,
+          "heading": "Final Loss and the Energy Proxy",
+          "cue": "Compare the left and right plots, using the two large number pairs below them.",
+          "paragraphs": [
+            "These case-118 plots measure different outcomes. The left shows demand unserved at the end. The right shows a snapshot energy proxy, calculated by weighting each response snapshot's loss by its window duration.",
+            "For the sequential case, moving from even to late windows increases final loss from 26.3 to 35.4 percent. But the snapshot proxy falls from 16.0 to 7.1 percent. A larger final loss can receive less time weight when it appears near the end.",
+            "These summaries average per-seed cohort maxima. The worst sequence for one metric may differ from the worst sequence for the other. The proxy also does not integrate continuous generator ramps. A smaller proxy alone therefore does not establish a better final condition."
+          ]
+        },
+        {
+          "number": 22,
+          "heading": "Critical Service Operating Objectives",
+          "cue": "Read the four policy cards from left to right.",
+          "paragraphs": [
+            "The third extension changes which demand the operator prioritizes. We use synthetic groups of load buses to represent critical services. These are illustrative assignments, rather than identified hospitals or other real facilities.",
+            "The first card is total-tight. Every megawatt counts equally, using the same tight solver precision as the priority policies. Weight two makes a critical megawatt count twice as much as ordinary demand. Weight ten makes it count ten times as much.",
+            "Critical-first maximizes critical service first, then maximizes total service while retaining that first optimum within a small tolerance. Every policy starts from the same initial dispatch and faces the same evaluated attack sequences. This lets us compare operating priorities fairly."
+          ]
+        },
+        {
+          "number": 23,
+          "heading": "Critical Service at the Nominal Setting",
+          "cue": "Higher bars are better. Point to the case-39 and case-118 highlights.",
+          "paragraphs": [
+            "Here, the vertical axis shows critical demand retained. Higher is better. The setting uses priority groups containing 25 percent of positive-demand buses and a ramp fraction of zero point one.",
+            "The total-tight baseline retains about 67 percent in case 39 and about 77 percent in case 118. The priority policies raise the measured retention to approximately 100 percent in those two larger cases. Case 14 improves much less because the network constraints still limit service.",
+            "These are worst-case summaries over the evaluated attack cohort. Case 14 is exhaustive, while the larger cases use a shared sampled cohort. The larger-case results do not guarantee protection against every possible attack."
+          ]
+        },
+        {
+          "number": 24,
+          "heading": "Priority Gains and Adverse Cases",
+          "cue": "Explain the positive case on the left and the adverse case on the right.",
+          "paragraphs": [
+            "Priority service also has costs. The left card shows a selected positive example on case 39. Critical-first preserves about 1,573 megawatts more critical demand than total-tight, at about 121 megawatts of extra total loss.",
+            "The right card shows a selected adverse example on case 14. After the later failure, critical-first loses about 240 megawatts more critical service than the baseline. Extra total loss is about 323 megawatts.",
+            "The operator optimizes its current response without knowing the next outage. A decision that helps now can therefore create a worse later state. These are selected extremes, rather than average outcomes. Tejas will now explain the sensitivity checks, demonstration and conclusions."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tejas Verification and Conclusions",
+      "meta": "Tejas  |  Slides 25 to 30  |  Final five minutes  |  Least technical role",
+      "slides": [
+        {
+          "number": 25,
+          "heading": "Critical Service Across Response Speeds",
+          "cue": "Point to the grey baseline and the priority-policy curves in each plot.",
+          "paragraphs": [
+            "We also checked what changes when generators can respond at different speeds. The horizontal axis shows the ramp allowance, or how much output a generator may change during a response. The vertical axis shows critical demand retained under the evaluated attacks.",
+            "The priority policies generally retain more critical service than the grey total-tight baseline in these larger-case experiments. Some priority curves overlap because their results are almost the same.",
+            "The plots use a shared sampled attack cohort. We also tested priority groups containing ten, 25 and fifty percent of positive-demand buses. These checks show how the conclusions depend on our chosen settings."
+          ]
+        },
+        {
+          "number": 26,
+          "heading": "Correctness and Boundaries of the Results",
+          "cue": "Read the three checks across the top, then the orange limitation.",
+          "paragraphs": [
+            "We used several checks. All sixteen extension tests passed. On 26 state probes, the extended code matched the untouched group implementation exactly for generation and served demand. Fresh exhaustive protection replays also matched the saved worst-loss results.",
+            "Policies share the same attack sequences within each comparison. Small protection cases use complete attack searches, while larger timing and priority cases use sampled cohorts.",
+            "There is a separate limitation in our group-code benchmark. A case-162 result at eight failures is missing after an infeasible response. We report that limitation openly. Passing the extension checks does not mean we reproduced every paper result."
+          ]
+        },
+        {
+          "number": 27,
+          "heading": "Where the Extensions Are Implemented",
+          "cue": "Follow the four blue file names from top to bottom.",
+          "paragraphs": [
+            "The code is organized around four main files. The physical response model is in grid_model.py, including optional service weights and critical-first rules.",
+            "The reusable extension logic is in extensions.py. It contains attack tables, protection selection and timed traces. The experiment settings and result summaries are in run_extensions.py.",
+            "Finally, audit_extensions.py contains fresh replay checks and comparisons using matched numerical precision. The architecture picture on the right connects this work to SEQUIN. All extension experiments use the group repository's existing SciPy defender. The extension README explains where to find the code and results."
+          ]
+        },
+        {
+          "number": 28,
+          "heading": "Demonstration and Interpretation",
+          "cue": "Use the screenshot. A browser demonstration is optional.",
+          "paragraphs": [
+            "This screenshot shows one recorded protection example. Lines four and three are protected. The replacement worst attack fails line fifteen, followed by line one. The table shows how total loss changes after each failure.",
+            "The saved demonstration also compares timing patterns for the same attack, and shows both a positive and an adverse priority-service example.",
+            "For the interactive view, we can open output slash demonstration dot html and change the selectors. It displays saved traces, so no optimization runs in the browser. The detailed measurements remain in the CSV and JSON files."
+          ]
+        },
+        {
+          "number": 29,
+          "heading": "Improvement Mixed Evidence and Failure",
+          "cue": "Give one takeaway for each of the three columns.",
+          "paragraphs": [
+            "Our conclusions are mixed. Protection gives useful gains, especially on case 14, but it does not always beat simple baselines under unseen conditions.",
+            "Timing changes both final load loss and the snapshot energy proxy. These measurements should be interpreted separately.",
+            "Critical-service priorities can preserve selected demand, but may increase other losses or harm critical service after a later failure. The work therefore shows when these choices help and where their limitations remain."
+          ]
+        },
+        {
+          "number": 30,
+          "heading": "Next Steps Motivated by the Results",
+          "cue": "Follow the three numbered rows, then move to the original closing slide 31.",
+          "paragraphs": [
+            "Our next steps follow the results. First, design protection across more demand and response-speed conditions, because the stress tests exposed failures.",
+            "Second, search more strongly for attacks targeting critical demand and test more priority-group assignments.",
+            "Third, examine generator restart rules and dispatch ties. A more realistic model could include operator lookahead, continuous ramps, restoration, storage and AC feasibility checks.",
+            "We have implemented three extensions and measured both their useful gains and their limitations. Thank you."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,8 @@
 - [Three-speaker script](output/documents/SEQUIN_15_Minute_Three_Speaker_Script.docx): Chandan slides 15–19, Saksham slides 20–24, Tejas slides 25–30. Approximately five minutes each.
 - [Separate full report](output/pdf/SEQUIN_Group_Extensions_Full_Report.pdf): the detailed scientific report.
 
+The speaking text and visual cues are editable in `output/documents/presentation_script.json`. Run `build_speaking_script_docx.py` to regenerate the Word script. The script follows the final presentation's titles, charts and demonstration screenshot.
+
 `build_elegant_part2.mjs` defines the 16 added slides using the measured results. `append_template_deck.py` calls `assemble_final_presentation.ps1` to combine an exported section with the original template through Microsoft PowerPoint on Windows. It replaces the previous ZIP-only assembly method. Supply the source template and exported section with `--source` and `--section`. Chart workbook values use 14 significant digits for Excel compatibility; raw experiment CSV files retain their recorded precision.
 
 ## Evaluated extensions and project report
