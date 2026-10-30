@@ -1,5 +1,11 @@
 # SEQUIN: sequential grid failures and resilience extensions
 
+## Portable result references
+
+Saved model and plan references use forward-slash paths relative to the project root. A metadata-only cleanup normalized 61 inherited result files; all other JSON values, including objectives, solutions, solver statuses and timings, remain unchanged. The record is in [reference_metadata_cleanup.json](output/reproduction/reference_metadata_cleanup.json). New reproduction runs use the same reference format. External input files are identified by filename only.
+
+Run `python scripts/audit_public_release.py` to check release files and ZIP contents for machine-specific paths and conversational document text. Source attribution, experiment limitations and recorded solver failures remain part of the project.
+
 ## Final project on the group reproduction
 
 The final extensions built on the group's Python reproduction are in [group-sequin](group-sequin/EXTENSIONS_README.md). This folder contains the final code, fresh experiments, tests, plots, demonstrations and presentation sources. Its [implementation comparison](group-sequin/IMPLEMENTATION_COMPARISON.md) explains the differences from the earlier implementation documented below.

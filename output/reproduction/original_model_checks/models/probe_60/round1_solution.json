@@ -1,5 +1,5 @@
 {
-  "model": "C:\\Users\\91943\\Documents\\ChatGPT\\cs637\\output\\reproduction\\original_model_checks\\models\\probe_60\\round1.mps",
+  "model": "output/reproduction/original_model_checks/models/probe_60/round1.mps",
   "interface": "gurobipy",
   "gurobi": [
     12,

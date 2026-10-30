@@ -6,10 +6,22 @@ import sys
 
 import gurobipy as gp
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def project_reference(path):
+    """Record a portable reference without exporting machine-specific parents."""
+    path = Path(path).resolve()
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        # Inputs outside the project are identified by filename only.
+        return path.name
+
 
 def main():
     model_path, result_path = map(Path, sys.argv[1:3])
-    payload = {"model": str(model_path), "interface": "gurobipy", "gurobi": list(gp.gurobi.version())}
+    payload = {"model": project_reference(model_path), "interface": "gurobipy", "gurobi": list(gp.gurobi.version())}
     try:
         with gp.Env(params={"OutputFlag": 0}) as env:
             with gp.read(str(model_path), env=env) as model:

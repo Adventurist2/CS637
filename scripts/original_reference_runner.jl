@@ -6,6 +6,19 @@ using Dates
 const ROOT = normpath(joinpath(@__DIR__, ".."))
 const SOURCE = joinpath(ROOT, "reproduction", "docker_reference")
 
+function project_reference(path)
+    relative = try
+        relpath(abspath(path), ROOT)
+    catch
+        return basename(path)
+    end
+    parts = splitpath(relative)
+    if isabspath(relative) || (!isempty(parts) && first(parts) == "..")
+        return basename(path)
+    end
+    return replace(relative, '\\'=>'/')
+end
+
 module OriginalSEQUIN
 using PowerModels
 using JuMP
@@ -168,11 +181,11 @@ function main()
         row["wall_seconds"]=time()-started
         writejson(path,row);push!(results,row)
         writejson(joinpath(output,"results.json"),Dict("source"=>"original extracted Julia functions; no algorithm modifications",
-            "plan"=>planfile,"results"=>results))
+            "plan"=>project_reference(planfile),"results"=>results))
         println("REFERENCE_PROGRESS ",name," ",row["status"]);flush(stdout)
     end
     writejson(joinpath(output,"results.json"),Dict("source"=>"original extracted Julia functions; no algorithm modifications",
-        "plan"=>planfile,"results"=>results))
+        "plan"=>project_reference(planfile),"results"=>results))
     return all(row["status"]=="ok" for row in results) ? 0 : 1
 end
 

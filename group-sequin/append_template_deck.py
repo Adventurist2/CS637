@@ -17,7 +17,7 @@ import shutil
 from lxml import etree as E
 
 ROOT=Path(__file__).resolve().parent
-SOURCE=Path(r'C:\Users\chand.CHANDAN\Downloads\SEQUIN_ppt.pptx')
+SOURCE=Path.home()/'Downloads/SEQUIN_ppt.pptx'
 SECTION=ROOT.parent/'tmp/elegant_section_deliverable/section.pptx'
 OUTPUT=ROOT/'output/presentation/SEQUIN_Original_Slides_With_Part2.pptx'
 QA=ROOT.parent/'tmp/presentation_assembly.json'

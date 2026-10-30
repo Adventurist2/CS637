@@ -1,6 +1,6 @@
-# Your assigned second part: completion audit
+# Second-part completion audit
 
-The second part in your screenshot is **critique/limitations -> implement 2-3 extensions -> evaluate with multiple baselines, sensitivity and robustness -> demonstrate/explain -> conclude with improvements, inconclusive results and failures -> future work**.
+The second-part study covers paper critique, three extensions, evaluation against multiple baselines, sensitivity and robustness tests, demonstrations, conclusions covering improvements and failures, and future work.
 
 ## What you had already done
 

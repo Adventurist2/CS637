@@ -1,5 +1,5 @@
 {
-  "model": "C:\\Users\\91943\\Documents\\ChatGPT\\cs637\\output\\reproduction\\original_traces\\models\\trace_118_0\\initial.mps",
+  "model": "output/reproduction/original_traces/models/trace_118_0/initial.mps",
   "interface": "gurobipy",
   "gurobi": [
     12,

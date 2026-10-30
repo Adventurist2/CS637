@@ -1,4 +1,4 @@
-"""Package the completed work without replacing the user's original archive."""
+"""Package extension sources, results and portable artifact-reference metadata."""
 
 from pathlib import Path
 from hashlib import sha256

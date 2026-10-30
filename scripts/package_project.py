@@ -22,6 +22,7 @@ def main():
                 "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in files],
                 "excluded": "Python/Julia runtimes and caches, temporary logs, license files, early failed export trials",
                 "scientific_status": "See output/reproduction/REPRODUCTION_REPORT.md; full native reproduction is incomplete"}
+    (ROOT / "PACKAGE_MANIFEST.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     target = ROOT / "SEQUIN_Project.zip"
     with ZipFile(target, "w", ZIP_DEFLATED, compresslevel=7) as archive:
         for p in files:

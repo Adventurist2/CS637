@@ -262,7 +262,7 @@ Not completed: dependency setup, reference execution, student implementation, nu
 
 ## Sources
 
-- [Attached paper](C:/Users/91943/Downloads/3716550.3722029.pdf), especially Sections 3-6, Table 1, Algorithms 1-2, and Appendix B.
+- [SEQUIN paper](https://doi.org/10.1145/3716550.3722029), especially Sections 3-6, Table 1, Algorithms 1-2, and Appendix B.
 - [Authors' repository and repeatability instructions](https://github.com/andrewgchio/SEQUIN).
 - [Inspected source commit](https://github.com/andrewgchio/SEQUIN/tree/d30f0c6528efe44c7cb5c82a1cd9dff0d6983296).
 - [PGLib-OPF benchmarks](https://github.com/power-grid-lib/pglib-opf).
